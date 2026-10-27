@@ -1,12 +1,11 @@
 {
-  "version": "4.9.1",
-  "file": "Kontoblick-Beta-Setup-4.9.1.exe",
-  "sha256": "b4b48cbc41491ac71af7f3ee5b0290db32a7d71ccd047060fb5aee29a0cd4911",
-  "size": 29844480,
+  "version": "4.9.2",
+  "file": "Kontoblick-Beta-Setup-4.9.2.exe",
+  "sha256": "894cc53b64104b2697a47cbead1df5734c4df6392f9d84867999dd4d50cca73e",
+  "size": 29854208,
   "virustotal": false,
   "notes": [
-    "Neu: optionales Profil mit Nutzername und Farbe. Ohne Konto bleibst du voll anonym.",
-    "Neue Feedback-Art \"Optik\". E-Mail-Adressen werden nie ausgeschrieben.",
-    "\"Wiederkehrend\" heißt jetzt kurz \"Abos\"."
+    "Profil als eigene Seite: Nutzername (alle 14 Tage änderbar), Profilfarbe, Passwort ändern, Konto löschen.",
+    "Neuer Slogan: \"Dein Konto im Blick\"."
   ]
 }

@@ -1,7 +1,11 @@
 {
-  "version": "4.8.1",
-  "file": "Kontoblick-Beta-Setup-4.8.1.exe",
-  "sha256": "06bfa970cbda62eb53298fca18330f390d220a2eb006ae1190931740254a5dce",
-  "size": 29778944,
-  "virustotal": false
+  "version": "4.9.0",
+  "file": "Kontoblick-Beta-Setup-4.9.0.exe",
+  "sha256": "73556a5f4770e1828c22f8aad1b66c6438220226377575a6db532c0ebc180b48",
+  "size": 29825536,
+  "virustotal": false,
+  "notes": [
+    "Updates direkt in der App: neue Version sehen, ein Klick, App startet neu.",
+    "Neue Startanimation und ein kurzer Rundgang durch die wichtigsten Bereiche."
+  ]
 }

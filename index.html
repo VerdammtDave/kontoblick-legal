@@ -1,319 +1,313 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kontoblick – Dein Geld im Blick</title>
-<meta name="description" content="Kontoblick zeigt Umsätze, Budgets, Sparziele und Schulden deiner Bankkonten. Privat, lokal verschlüsselt auf deinem Windows-PC. Beta, nur mit Einladung.">
+<title>Kontoblick – Dein Konto im Blick</title>
+<meta name="description" content="Kontoblick liest deine Umsätze über die offizielle Bankschnittstelle und rechnet Budgets, Fixkosten, Schulden und Sparziele aus. Verschlüsselt auf deinem Windows-PC. Beta, nur mit Einladung.">
 <link rel="canonical" href="https://kontoblick.laudymedia.de/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kontoblick">
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="https://kontoblick.laudymedia.de/">
-<meta property="og:title" content="Kontoblick – Dein Geld im Blick">
-<meta property="og:description" content="Umsätze, Budgets, Sparziele und Schulden an einem Ort. Privat, verschlüsselt und lokal auf deinem PC. Beta, nur mit Einladung.">
+<meta property="og:title" content="Kontoblick – Dein Konto im Blick">
+<meta property="og:description" content="Umsätze, Budgets, Fixkosten, Schulden und Sparziele. Verschlüsselt auf deinem PC. Beta, nur mit Einladung.">
 <meta property="og:image" content="https://kontoblick.laudymedia.de/img/og.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Kontoblick: Übersicht mit verfügbarem Geld, Einnahmen, Ausgaben und Kategorien">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kontoblick – Dein Geld im Blick">
-<meta name="twitter:description" content="Umsätze, Budgets, Sparziele und Schulden an einem Ort. Privat und lokal auf deinem PC.">
+<meta name="twitter:title" content="Kontoblick – Dein Konto im Blick">
+<meta name="twitter:description" content="Umsätze, Budgets, Fixkosten, Schulden und Sparziele. Verschlüsselt auf deinem PC.">
 <meta name="twitter:image" content="https://kontoblick.laudymedia.de/img/og.png">
-<meta name="theme-color" content="#7c5cff">
-<script>document.documentElement.classList.add('js')</script>
+<meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101013" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="img/favicon.png">
 <style>
 :root{
-  --bg:#05050a; --bg2:#0c0c14; --card:#13131c; --card2:#1a1a26; --line:rgba(255,255,255,.09);
-  --text:#f5f5f7; --muted:#9a9aa8; --blue:#0a84ff; --violet:#7c5cff; --green:#30d158; --red:#ff453a;
-  --grad:linear-gradient(135deg,#1b6dff 0%,#7c5cff 100%);
+  --bg:#f6f4ef; --surface:#ffffff; --ink:#17171c; --muted:#62626c; --rule:#dcd8ce;
+  --accent:#2b5bf0; --accent-ink:#ffffff; --link:#2b5bf0; --field:#fbfaf7;
+  --shadow:0 1px 2px rgba(20,20,30,.07),0 18px 40px -18px rgba(20,20,30,.28);
+  --font:"Segoe UI Variable Text","Segoe UI Variable Display","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101013;--surface:#18181c;--ink:#ececf0;--muted:#9a9aa6;--rule:#2a2a31;--accent:#4a74ff;--accent-ink:#ffffff;--link:#8aa6ff;--field:#121215;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 18px 40px -18px rgba(0,0,0,.7)}
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font:16px/1.55 "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-img{display:block;max-width:100%}
-.wrap{width:min(1120px,100% - 40px);margin:0 auto}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--link);text-underline-offset:3px}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 48px);margin:0 auto}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-/* Navigation */
-nav{position:fixed;inset:0 0 auto 0;z-index:20;backdrop-filter:blur(18px);background:rgba(5,5,10,.7);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;height:62px;gap:28px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.3px;text-decoration:none}
-.brand img{width:30px;height:30px}
-nav .links{display:flex;align-items:center;gap:26px;margin-left:auto;font-size:14.5px;color:var(--muted)}
-nav .links a{text-decoration:none;transition:color .2s}
-nav .links a:hover{color:var(--text)}
-nav .links a.btn,nav .links a.btn:hover{color:#fff;line-height:1.2}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:15px;color:#fff;background:var(--grad);padding:12px 24px;border-radius:999px;text-decoration:none;transition:transform .15s,box-shadow .25s,filter .2s;box-shadow:0 8px 28px rgba(80,90,255,.35)}
-.btn:hover{transform:translateY(-1px);filter:brightness(1.08);box-shadow:0 12px 34px rgba(80,90,255,.5)}
-.btn:active{transform:scale(.98)}
-.btn.ghost{background:rgba(255,255,255,.08);box-shadow:none}
-.btn.small{padding:8px 18px;font-size:14px}
-@media(max-width:720px){nav .links a:not(.btn){display:none}}
+/* Kopfzeile */
+header.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;height:60px;gap:32px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:650;font-size:18px;letter-spacing:-.01em}
+.brand img{width:26px;height:26px}
+header.top nav{margin-left:auto;display:flex;gap:26px;font-size:15px}
+header.top nav a{color:var(--muted);text-decoration:none}
+header.top nav a:hover{color:var(--ink)}
+@media(max-width:640px){header.top nav a:not(.cta-link){display:none}}
+.cta-link{color:var(--ink)!important;font-weight:600}
 
-/* Hero */
-.hero{position:relative;padding:150px 0 40px;text-align:center;overflow:hidden}
-.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(110px);opacity:.55;z-index:0;animation:float 16s ease-in-out infinite}
-.hero::before{width:560px;height:560px;background:#1b4dff;left:-140px;top:-100px}
-.hero::after{width:520px;height:520px;background:#8a3dff;right:-120px;top:40px;animation-delay:-8s}
-@keyframes float{50%{transform:translate(50px,40px) scale(1.08)}}
-.hero .wrap{position:relative;z-index:1}
-.pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:#c9c9ff;background:rgba(124,92,255,.14);border:1px solid rgba(124,92,255,.35);padding:6px 14px;border-radius:999px;margin-bottom:26px}
-.pill i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.04;letter-spacing:-2.2px;font-weight:800}
-h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{max-width:640px;margin:22px auto 34px;font-size:clamp(17px,2.2vw,20px);color:var(--muted)}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.shot-hero{margin:64px auto 0;max-width:980px}
-.window{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 40px 120px -20px rgba(70,80,255,.45),0 0 0 1px rgba(255,255,255,.04)}
-.window img{width:100%;height:auto}
-.hero .shot-hero{transform:perspective(1600px) rotateX(5deg);transform-origin:top;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.hero .shot-hero.in{transform:perspective(1600px) rotateX(0)}
+/* Knöpfe */
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:16px;color:var(--accent-ink);background:var(--accent);padding:12px 22px;border-radius:8px;text-decoration:none;transition:filter .15s}
+.btn:hover{filter:brightness(1.1)}
+.btn[aria-busy=true]{opacity:.6;pointer-events:none}
+.textlink{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+.textlink:hover{border-color:var(--ink)}
 
-/* Sektionen */
-section{padding:96px 0}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:12px}
-h2{font-size:clamp(30px,4.6vw,48px);line-height:1.1;letter-spacing:-1.4px;font-weight:800}
-.sub{color:var(--muted);max-width:620px;margin-top:16px;font-size:17.5px}
-.center{text-align:center}.center .sub{margin-inline:auto}
+/* Start */
+.hero{padding:76px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+h1{font-size:clamp(40px,5.4vw,66px);line-height:1.04;letter-spacing:-.035em;font-weight:680}
+.lead{margin-top:22px;max-width:30em;color:var(--muted);font-size:19px;line-height:1.55}
+.actions{margin-top:32px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.facts{margin-top:30px;color:var(--muted);font-size:14.5px}
+.facts span+span::before{content:"·";margin:0 .6em}
+/* App-Bilder laufen unten in die Seitenfarbe aus, statt mitten in einer Karte abzubrechen */
+.shot{position:relative;border:1px solid var(--rule);border-bottom:0;border-radius:10px 10px 0 0;overflow:hidden;background:var(--surface)}
+.shot::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(to bottom,transparent,var(--bg) 92%);pointer-events:none}
+@media(max-width:900px){.hero{padding:44px 0 56px}.hero .wrap{grid-template-columns:1fr;gap:40px}}
 
-.feature{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center;margin-top:90px}
-.feature.flip{grid-template-columns:1.25fr 1fr}
-.feature.flip .text{order:2}
-.feature h3{font-size:clamp(24px,3vw,32px);letter-spacing:-.8px;line-height:1.15;margin-bottom:14px}
-.feature p{color:var(--muted);font-size:17px}
-.feature ul{list-style:none;margin-top:18px;display:grid;gap:10px}
-.feature li{display:flex;gap:10px;color:#cfcfda;font-size:15.5px}
-.feature li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--grad) center/10px no-repeat;
-  -webkit-mask:none}
-.feature li::after{content:"";position:absolute}
-@media(max-width:860px){.feature,.feature.flip{grid-template-columns:1fr;gap:28px;margin-top:64px}.feature.flip .text{order:0}}
+/* Abschnitte */
+section{padding:84px 0;border-top:1px solid var(--rule)}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;letter-spacing:-.025em;font-weight:660}
+.intro{margin-top:14px;max-width:34em;color:var(--muted);font-size:18px}
 
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
-.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;padding:28px;transition:transform .3s,border-color .3s}
-.card:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.5)}
-.card .ico{width:46px;height:46px;border-radius:13px;background:var(--grad);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
-.card h4{font-size:19px;letter-spacing:-.3px;margin-bottom:8px}
-.card p{color:var(--muted);font-size:15.5px}
-@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.rows{margin-top:56px;display:grid;gap:84px}
+.row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:center}
+.row .no{font:600 14px var(--mono);color:var(--muted);margin-bottom:10px}
+.row h3{font-size:25px;line-height:1.2;letter-spacing:-.02em;font-weight:650;margin-bottom:12px}
+.row p{color:var(--muted)}
+@media(max-width:900px){.row{grid-template-columns:1fr;gap:24px}.rows{gap:60px}}
 
-.privacy{background:radial-gradient(900px 400px at 50% 0,rgba(124,92,255,.14),transparent),var(--bg2);border-block:1px solid var(--line)}
+.also{margin-top:64px;padding-top:28px;border-top:1px solid var(--rule)}
+.also h3{font-size:16px;font-weight:650;margin-bottom:12px}
+.also ul{list-style:none;columns:2;column-gap:40px;color:var(--muted)}
+.also li{padding:5px 0;break-inside:avoid}
+@media(max-width:640px){.also ul{columns:1}}
 
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px;counter-reset:s}
-.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px}
-.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--grad);font-weight:700;margin-bottom:16px}
-.step h4{font-size:17.5px;margin-bottom:6px}
-.step p{color:var(--muted);font-size:15px}
-@media(max-width:960px){.steps{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px}
+.points{display:grid}
+.points div{padding:22px 0;border-top:1px solid var(--rule)}
+.points div:first-child{border-top:0;padding-top:0}
+.points b{display:block;font-size:18px;font-weight:650;margin-bottom:4px}
+.points p{color:var(--muted)}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:28px}}
+
+ol.steps{margin-top:40px;list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 56px;max-width:860px}
+ol.steps li{counter-increment:s;padding-top:16px;border-top:1px solid var(--rule)}
+ol.steps li::before{content:counter(s,decimal-leading-zero);display:block;font:600 14px var(--mono);color:var(--muted);margin-bottom:8px}
+ol.steps b{display:block;font-weight:650;margin-bottom:3px}
+ol.steps span{color:var(--muted)}
+@media(max-width:640px){ol.steps{grid-template-columns:1fr}}
 
 /* Download */
-.dl{position:relative;margin:52px auto 0;max-width:640px;background:linear-gradient(180deg,#1a1a2c,#101019);border:1px solid rgba(124,92,255,.4);border-radius:26px;padding:40px;text-align:center;box-shadow:0 30px 90px -30px rgba(90,80,255,.5)}
-.dl .lock{width:62px;height:62px;border-radius:18px;background:var(--grad);display:grid;place-items:center;margin:0 auto 20px;font-size:28px;transition:transform .5s}
-.dl.open .lock{transform:rotate(-12deg) scale(1.08)}
-.dl h3{font-size:25px;letter-spacing:-.5px}
-.dl p{color:var(--muted);margin:8px 0 22px;font-size:15.5px}
-.code{width:100%;padding:16px 18px;border-radius:14px;border:1.5px solid var(--line);background:#07070c;color:var(--text);font:600 19px/1 Consolas,"SF Mono",monospace;letter-spacing:2px;text-align:center;text-transform:uppercase;outline:none;transition:border-color .2s,box-shadow .2s}
-.code:focus{border-color:var(--violet);box-shadow:0 0 0 4px rgba(124,92,255,.2)}
-.dl .btn{width:100%;margin-top:14px;padding:15px}
-.msg{min-height:22px;margin-top:14px;font-size:14.5px}
-.msg.err{color:var(--red)}.msg.ok{color:var(--green)}
-.shake{animation:shake .4s}
-@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.dl{margin-top:36px;max-width:520px;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:28px}
+.dl label{display:block;font-weight:650;margin-bottom:10px}
+.code{width:100%;padding:13px 14px;border-radius:8px;border:1px solid var(--rule);background:var(--field);color:var(--ink);font:600 17px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;outline:none}
+.code:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.code::placeholder{color:var(--muted);opacity:.7;letter-spacing:.04em}
+.dl .btn{margin-top:14px;width:100%}
+.help{margin-top:10px;color:var(--muted);font-size:14.5px}
+.msg{min-height:22px;margin-top:12px;font-size:15px}
+.msg.err{color:#c4291c}
+@media(prefers-color-scheme:dark){.msg.err{color:#ff7b70}}
+.shake{animation:shake .35s}
+@keyframes shake{25%,75%{transform:translateX(-5px)}50%{transform:translateX(5px)}}
 .dl .ready{display:none}
-.dl.open .ready{display:block;animation:pop .5s cubic-bezier(.2,.9,.3,1.2)}
+.dl.open .ready{display:block}
 .dl.open .ask{display:none}
-@keyframes pop{from{opacity:0;transform:scale(.94)}}
-.small{font-size:13.5px;color:var(--muted)}
-.bar{height:10px;border-radius:6px;background:rgba(255,255,255,.1);overflow:hidden;margin:0 0 18px}
-.bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:6px;transition:width .15s}
-.btn[aria-busy=true]{opacity:.6;pointer-events:none}
-.verify{max-width:640px;margin:26px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px}
-.verify h4{font-size:16px;margin-bottom:4px}
-.verify p{color:var(--muted);font-size:14.5px}
-.verify .hash{display:flex;gap:10px;align-items:center;margin:14px 0 4px;background:#07070c;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
-.verify code{flex:1;min-width:0;font:13px/1.4 Consolas,"SF Mono",monospace;color:#d8d8e8;word-break:break-all}
-.verify button{flex:none;border:0;border-radius:8px;background:rgba(255,255,255,.1);color:var(--text);font:600 13px inherit;padding:7px 12px;cursor:pointer}
-.verify button:hover{background:rgba(255,255,255,.18)}
-.verify .vt{margin-top:10px}.verify .vt a{color:#9fb4ff}
-.verify details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
-.verify summary{cursor:pointer;color:var(--muted);font-size:14px}
+.dl .ready h3{font-size:19px;font-weight:650;margin-bottom:4px}
+.dl .ready p{color:var(--muted);margin-bottom:14px;font-size:15.5px}
+.bar{height:6px;border-radius:3px;background:var(--rule);overflow:hidden;margin:0 0 16px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .15s}
+.small{font-size:14px;color:var(--muted)}
+
+.verify{margin-top:28px;max-width:520px}
+.verify h3{font-size:16px;font-weight:650}
+.verify p{color:var(--muted);font-size:15px;margin-top:2px}
+.hash{margin-top:12px;display:flex;gap:10px;align-items:flex-start;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:var(--surface)}
+.hash code{flex:1;min-width:0;font:13px/1.45 var(--mono);word-break:break-all}
+.hash button{flex:none;border:1px solid var(--rule);border-radius:6px;background:transparent;color:var(--ink);font:600 13px var(--font);padding:5px 10px;cursor:pointer}
+.hash button:hover{background:var(--field)}
+.verify details{margin-top:14px;color:var(--muted);font-size:15px}
+.verify summary{cursor:pointer}
 .verify details p{margin-top:8px}
-.note{margin-top:26px;padding:16px 18px;border-radius:14px;background:rgba(255,159,10,.08);border:1px solid rgba(255,159,10,.25);color:#e9c98f;font-size:14.5px;text-align:left}
-.note b{color:#ffd58a}
 
-footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center}
-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-left:auto}
-footer a{text-decoration:none}footer a:hover{color:var(--text)}
-
-/* Einblenden beim Scrollen */
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .rv.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+footer{padding:36px 0 56px;border-top:1px solid var(--rule);color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px}
+footer .links{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap}
+footer a{color:var(--muted);text-decoration:none}footer a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
 
-<nav>
+<header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="img/logo.png" alt="" width="30" height="30">Kontoblick</a>
-    <div class="links">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="" width="26" height="26">Kontoblick</a>
+    <nav>
       <a href="#funktionen">Funktionen</a>
       <a href="#privat">Privatsphäre</a>
-      <a href="#start">Erste Schritte</a>
-      <a class="btn small" href="#download">Herunterladen</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <div class="pill rv"><i></i>Beta · nur mit Einladung · für Windows</div>
-    <h1 class="rv d1">Dein Geld<br>im <span>Blick.</span></h1>
-    <p class="lead rv d2">Umsätze, Budgets, Sparziele und Schulden deiner Bankkonten an einem Ort. Direkt auf deinem PC, verschlüsselt, ohne Konto und ohne Tracking.</p>
-    <div class="cta rv d3">
-      <a class="btn" href="#download">Kontoblick herunterladen</a>
-      <a class="btn ghost" href="#funktionen">Was kann es?</a>
-    </div>
-    <div class="shot-hero" id="heroShot">
-      <div class="window"><img src="img/overview.png" alt="Kontoblick Übersicht mit verfügbarem Geld, Einnahmen, Ausgaben und Kategorien" width="1180" height="800"></div>
-    </div>
+      <a href="#start">Einrichtung</a>
+      <a class="cta-link" href="#download">Download</a>
+    </nav>
   </div>
 </header>
 
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dein Konto im Blick.</h1>
+      <p class="lead">Kontoblick liest deine Umsätze über die offizielle Bankschnittstelle und rechnet Budgets, Fixkosten, Schulden und Sparziele aus. Alles bleibt verschlüsselt auf deinem Windows-PC.</p>
+      <div class="actions">
+        <a class="btn" href="#download">Herunterladen</a>
+        <a class="textlink" href="#funktionen">Funktionen ansehen</a>
+      </div>
+      <p class="facts"><span>Für Windows 10 und 11</span><span>Beta</span><span>Kostenlos</span><span>Nur mit Einladung</span></p>
+    </div>
+    <div class="shot">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="img/overview-dark.png"><img src="img/overview-light.png" alt="Kontoblick, Übersicht: verfügbares Geld, Einnahmen, Ausgaben und Ausgaben nach Kategorie" width="1164" height="992"></picture>
+    </div>
+  </div>
+</div>
+
 <section id="funktionen">
   <div class="wrap">
-    <div class="center">
-      <div class="eyebrow rv">Funktionen</div>
-      <h2 class="rv d1">Alles, was dein Konto<br>dir nicht zeigt.</h2>
-      <p class="sub rv d2">Kontoblick liest deine Umsätze über die offizielle Bankschnittstelle und macht daraus eine klare Übersicht.</p>
+    <h2>Was Kontoblick macht</h2>
+    <p class="intro">Deine Bank zeigt dir Buchungen. Kontoblick zeigt dir, was daraus folgt.</p>
+
+    <div class="rows">
+      <div class="row">
+        <div>
+          <div class="no">01</div>
+          <h3>Übersicht</h3>
+          <p>Was auf dem Konto ist, was reinkam, was rausging und wohin das Geld in diesem Monat geflossen ist. Sparkonten zählen nicht zum verfügbaren Geld.</p>
+        </div>
+        <div class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="img/overview-dark.png"><img loading="lazy" src="img/overview-light.png" alt="Übersicht" width="1164" height="992"></picture></div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="no">02</div>
+          <h3>Budgets pro Kategorie</h3>
+          <p>Lege für jede Kategorie ein Monatsbudget fest. Kontoblick zeigt, ob du im Plan liegst, und rechnet hoch, wo du am Monatsende landest.</p>
+        </div>
+        <div class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="img/categories-dark.png"><img loading="lazy" src="img/categories-light.png" alt="Kategorien mit Budgets, Tempo und Prognose" width="1164" height="992"></picture></div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="no">03</div>
+          <h3>Finanzplan</h3>
+          <p>Wie viel bleibt dir bis zum nächsten Gehalt? Fixkosten, Raten und geplante Ausgaben sind schon abgezogen.</p>
+        </div>
+        <div class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="img/plan-dark.png"><img loading="lazy" src="img/plan-light.png" alt="Finanzplan bis zum nächsten Geldeingang" width="1164" height="992"></picture></div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="no">04</div>
+          <h3>Schulden</h3>
+          <p>Rate und Restbetrag pro Schuld. Ordnest du eine Abbuchung zu, rechnet sich der Rest von selbst.</p>
+        </div>
+        <div class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="img/debts-dark.png"><img loading="lazy" src="img/debts-light.png" alt="Schulden mit Raten und Fortschritt" width="1164" height="992"></picture></div>
+      </div>
     </div>
 
-    <div class="feature rv">
-      <div class="text">
-        <h3>Sofort sehen, was übrig ist</h3>
-        <p>Verfügbares Geld, Einnahmen, Ausgaben und Sparquote auf einen Blick. Sparkonten zählen nicht zum verfügbaren Geld.</p>
-        <ul><li>Monatsvergleich der letzten Monate</li><li>Ausgaben nach Kategorie als Ring, anklickbar</li><li>Start in Sekunden, Daten sind lokal gespeichert</li></ul>
-      </div>
-      <div class="window"><img loading="lazy" src="img/overview.png" alt="Übersicht" width="1180" height="800"></div>
-    </div>
-
-    <div class="feature flip rv">
-      <div class="text">
-        <h3>Kategorien mit Budget</h3>
-        <p>Jede Kategorie zeigt, wie viel du ausgegeben hast und ob du im Plan bist. Mit Tempo-Marke und Prognose bis Monatsende.</p>
-        <ul><li>„Du kannst noch 21 € pro Tag ausgeben“</li><li>Mini-Verlauf der letzten Monate je Kategorie</li><li>Vorschläge für Budgets aus deinen Daten</li></ul>
-      </div>
-      <div class="window"><img loading="lazy" src="img/categories.png" alt="Kategorien und Budgets" width="1180" height="800"></div>
-    </div>
-
-    <div class="feature rv">
-      <div class="text">
-        <h3>Buchungen, die du ordnen kannst</h3>
-        <p>Suchen, filtern, umkategorisieren, Notizen und Belege anhängen. Eigene Regeln sortieren künftige Buchungen automatisch.</p>
-        <ul><li>Mehrere Kategorien gleichzeitig filtern</li><li>Eigene Zahlungen erfassen</li><li>Interne Umbuchungen erkennt Kontoblick selbst</li></ul>
-      </div>
-      <div class="window"><img loading="lazy" src="img/bookings.png" alt="Buchungen" width="1180" height="800"></div>
-    </div>
-
-    <div class="feature flip rv">
-      <div class="text">
-        <h3>Finanzplan bis zum nächsten Geldeingang</h3>
-        <p>Kontoblick rechnet Fixkosten, Raten und geplante Ausgaben mit ein und zeigt, was dir wirklich bleibt.</p>
-        <ul><li>Wiederkehrende Zahlungen werden erkannt</li><li>Eigene Fixkosten und geplante Ausgaben</li><li>Prognose bis Geldeingang, Monatsanfang oder Monatsmitte</li></ul>
-      </div>
-      <div class="window"><img loading="lazy" src="img/plan.png" alt="Finanzplan" width="1180" height="800"></div>
-    </div>
-
-    <div class="feature rv">
-      <div class="text">
-        <h3>Schulden im Griff</h3>
-        <p>Raten, Restbetrag und Fortschritt rechnen sich automatisch, sobald du eine Abbuchung zuordnest.</p>
-        <ul><li>Raten automatisch verbuchen</li><li>Fortschrittsbalken und Restlaufzeit</li><li>Sparziele mit Verlauf und eigener Farbe</li></ul>
-      </div>
-      <div class="window"><img loading="lazy" src="img/debts.png" alt="Schulden" width="1180" height="800"></div>
+    <div class="also">
+      <h3>Außerdem</h3>
+      <ul>
+        <li>Buchungen durchsuchen und umkategorisieren</li>
+        <li>Notizen, Tags und Belege an Buchungen</li>
+        <li>Regelmäßige Zahlungen (Abos) erkennen</li>
+        <li>Sparziele mit Verlauf und eigener Farbe</li>
+        <li>Privat und Business getrennt</li>
+        <li>Zahlen mit einem Klick ausblenden</li>
+        <li>Hell und Dunkel</li>
+        <li>Updates direkt in der App</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="privacy" id="privat">
-  <div class="wrap">
-    <div class="center">
-      <div class="eyebrow rv">Privatsphäre</div>
-      <h2 class="rv d1">Deine Daten bleiben bei dir.</h2>
-      <p class="sub rv d2">Kontoblick hat keinen Server, der deine Konten sieht. Alles passiert auf deinem Computer.</p>
+<section id="privat">
+  <div class="wrap split">
+    <div>
+      <h2>Lokal, verschlüsselt, nur lesend.</h2>
     </div>
-    <div class="grid3">
-      <div class="card rv"><div class="ico">🔒</div><h4>Verschlüsselt gespeichert</h4><p>Umsätze und Einstellungen liegen in einer verschlüsselten Datei (AES-256). Der Schlüssel steckt im Windows-Anmeldespeicher.</p></div>
-      <div class="card rv d1"><div class="ico">👁</div><h4>Nur lesender Zugriff</h4><p>Kontoblick kann nichts überweisen und nichts ändern. Die Freigabe gibst du bei deiner Bank, du kannst sie jederzeit widerrufen.</p></div>
-      <div class="card rv d2"><div class="ico">🚫</div><h4>Kein Tracking</h4><p>Keine Werbung, keine Analyse, keine Auswertung. Die IBAN wird in der App nur gekürzt gezeigt, und Zahlen lassen sich mit einem Klick ausblenden.</p></div>
+    <div class="points">
+      <div><b>Deine Daten bleiben auf deinem PC.</b><p>Umsätze und Einstellungen liegen in einer verschlüsselten Datei (AES-256). Der Schlüssel dazu steckt im Windows-Anmeldespeicher. Es gibt keinen Server, der deine Konten sieht.</p></div>
+      <div><b>Kontoblick kann nur lesen.</b><p>Es kann nichts überweisen und nichts ändern. Die Freigabe gibst du bei deiner Bank, und du kannst sie dort jederzeit widerrufen.</p></div>
+      <div><b>Kein Tracking.</b><p>Keine Werbung, keine Analyse. Gesendet wird nur, was du selbst als Feedback abschickst, und auch das ohne Konto auf Wunsch anonym. Mehr steht in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p></div>
     </div>
   </div>
 </section>
 
 <section id="start">
   <div class="wrap">
-    <div class="center">
-      <div class="eyebrow rv">Erste Schritte</div>
-      <h2 class="rv d1">In zehn Minuten startklar.</h2>
-      <p class="sub rv d2">Einmal einrichten, danach läuft alles von selbst.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><h4>Schlüssel bekommen</h4><p>Kontoblick ist in der Beta nur mit Einladungs-Schlüssel nutzbar.</p></div>
-      <div class="step rv d1"><h4>Herunterladen & installieren</h4><p>Setup starten, Ordner wählen, fertig. Keine Administratorrechte nötig.</p></div>
-      <div class="step rv d2"><h4>Kostenlosen Zugang einrichten</h4><p>Die App führt dich Schritt für Schritt durch die Anmeldung bei Enable Banking (für Privatpersonen kostenlos).</p></div>
-      <div class="step rv d3"><h4>Bank verbinden</h4><p>Bank wählen, per Push-TAN freigeben, und Kontoblick holt bis zu zwei Jahre Verlauf.</p></div>
-    </div>
+    <h2>Einrichtung in zehn Minuten</h2>
+    <p class="intro">Du brauchst einmalig einen eigenen, kostenlosen Zugang bei Enable Banking. Die App führt dich Schritt für Schritt hindurch.</p>
+    <ol class="steps">
+      <li><b>Einladungs-Schlüssel</b><span>Kontoblick ist in der Beta nur mit Schlüssel nutzbar. Du bekommst ihn von der Person, die dir die App empfohlen hat.</span></li>
+      <li><b>Setup laden und starten</b><span>Ordner wählen, installieren. Administratorrechte brauchst du nicht.</span></li>
+      <li><b>Zugang bei Enable Banking</b><span>Konto anlegen, eigene App registrieren, Zugangsdaten in Kontoblick eintragen.</span></li>
+      <li><b>Bank verbinden</b><span>Bank wählen und per Push-TAN freigeben. Danach lädt Kontoblick bis zu zwei Jahre Verlauf.</span></li>
+    </ol>
   </div>
 </section>
 
-<section id="download" style="padding-top:20px">
-  <div class="wrap center">
-    <div class="eyebrow rv">Download</div>
-    <h2 class="rv d1">Mit Schlüssel herunterladen.</h2>
-    <p class="sub rv d2">Den Download schaltet dein persönlicher Einladungs-Schlüssel frei. In der App gibst du ihn beim ersten Start noch einmal ein.</p>
+<section id="download">
+  <div class="wrap">
+    <h2>Herunterladen</h2>
+    <p class="intro">Das Setup gibt es nur mit Einladungs-Schlüssel. In der App gibst du ihn beim ersten Start noch einmal ein.</p>
 
-    <div class="dl rv d2" id="dl">
-      <div class="lock" id="lock">🔐</div>
+    <div class="dl" id="dl">
       <div class="ask">
-        <h3>Einladungs-Schlüssel eingeben</h3>
-        <p>Du hast keinen? Frag die Person, die dir Kontoblick empfohlen hat.</p>
         <form id="form" autocomplete="off">
-          <input class="code" id="code" placeholder="KB-XXXX-XXXX-XXXX-XXXX" maxlength="40" spellcheck="false" aria-label="Einladungs-Schlüssel">
+          <label for="code">Einladungs-Schlüssel</label>
+          <input class="code" id="code" placeholder="KB-XXXX-XXXX-XXXX-XXXX" maxlength="40" spellcheck="false">
           <button class="btn" id="go" type="submit">Prüfen und herunterladen</button>
         </form>
         <div class="msg" id="msg" role="status"></div>
+        <p class="help">Keinen Schlüssel? Frag die Person, die dir Kontoblick empfohlen hat.</p>
       </div>
       <div class="ready">
-        <h3>Schlüssel gültig ✓</h3>
+        <h3>Der Schlüssel ist gültig.</h3>
         <p id="dlText">Der Download startet gleich. Falls nicht, klick auf den Knopf.</p>
         <div class="bar" id="bar" hidden><i id="barFill"></i></div>
         <a class="btn" id="file" href="#">Setup herunterladen</a>
-        <p class="small" style="margin-top:14px" id="fileInfo"></p>
+        <p class="small" style="margin-top:12px" id="fileInfo"></p>
       </div>
     </div>
 
-    <div class="verify rv" id="verify" hidden>
-      <h4>Datei prüfen</h4>
-      <p>Die Prüfsumme (SHA-256) der Setup-Datei. Wer sie selbst nachrechnet, sieht, dass die Datei unverändert ist.</p>
+    <div class="verify" id="verify" hidden>
+      <h3>Datei prüfen</h3>
+      <p>Die Prüfsumme (SHA-256) der Setup-Datei. Wer sie nachrechnet, sieht, dass die Datei unverändert ist.</p>
       <div class="hash"><code id="hash"></code><button type="button" id="copyHash">Kopieren</button></div>
-      <p class="vt" id="vtRow" hidden><a id="vtLink" href="#" target="_blank" rel="noopener">Bei VirusTotal prüfen</a> · Ergebnis von rund 70 Prüfdiensten</p>
+      <p class="vt" id="vtRow" hidden style="margin-top:10px"><a id="vtLink" href="#" target="_blank" rel="noopener">Bei VirusTotal prüfen</a></p>
       <details>
         <summary>Hilfe beim Start</summary>
         <p>Bei neuen Programmen fragt Windows (SmartScreen) vor dem ersten Start nach. Wähle <b>Weitere Informationen</b> und dann <b>Trotzdem ausführen</b>. Das Setup ist noch nicht digital signiert, deshalb erscheint die Rückfrage.</p>
       </details>
     </div>
-    <p class="small" style="margin-top:22px">Windows 10 oder 11 · 64 Bit · Beta</p>
+    <p class="small" style="margin-top:22px">Windows 10 oder 11, 64 Bit.</p>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Kontoblick</span>
+    <span>Kontoblick · Beta</span>
     <div class="links">
       <a href="datenschutz.html">Datenschutz</a>
       <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
@@ -329,7 +323,6 @@ footer a{text-decoration:none}footer a:hover{color:var(--text)}
 // Was jemand damit darf, regeln die Zugriffsregeln und die Funktion auf dem Server.
 const API = 'https://jgadfqdxyosbgsomoepk.supabase.co';
 const KEY = 'sb_publishable_zTdMy5aGsxn2jxy1v9TOdg_ZL5HZXqJ';
-
 const $ = (id) => document.getElementById(id);
 
 // Prüfsumme und Prüf-Link aus release.json (öffentlich, enthält nur Version, Dateiname und Hash)
@@ -345,15 +338,6 @@ fetch('release.json', { cache: 'no-store' }).then((r) => r.json()).then((rel) =>
     try { await navigator.clipboard.writeText(rel.sha256); $('copyHash').textContent = 'Kopiert'; setTimeout(() => ($('copyHash').textContent = 'Kopieren'), 1800); } catch (_) {}
   });
 }).catch(() => {});
-
-// Einblenden beim Scrollen
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: .12 });
-document.querySelectorAll('.rv, #heroShot').forEach((el) => io.observe(el));
-requestAnimationFrame(() => $('heroShot').classList.add('in'));
-// Sicherheitsnetz: Nach 1,2 s ist alles sichtbar, auch wenn die Scroll-Erkennung nicht anspringt.
-setTimeout(() => document.querySelectorAll('.rv').forEach((el) => el.classList.add('in')), 2500);
 
 // Eingabe: Großbuchstaben, Bindestriche automatisch
 $('code').addEventListener('input', (e) => {
@@ -449,3 +433,4 @@ $('form').addEventListener('submit', async (e) => {
 </script>
 </body>
 </html>
+

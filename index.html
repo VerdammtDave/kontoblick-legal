@@ -376,7 +376,7 @@ $('form').addEventListener('submit', async (e) => {
   btn.disabled = true;
   btn.textContent = 'Prüfe …';
   try {
-    const r = await fetch(API + '/functions/v1/download', {
+    const r = await fetch(API + '/functions/v1/rapid-action', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', apikey: KEY },
       body: JSON.stringify({ code }),

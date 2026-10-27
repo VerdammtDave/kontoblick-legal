@@ -30,9 +30,10 @@ nav{position:fixed;inset:0 0 auto 0;z-index:20;backdrop-filter:blur(18px);backgr
 nav .wrap{display:flex;align-items:center;height:62px;gap:28px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.3px;text-decoration:none}
 .brand img{width:30px;height:30px}
-nav .links{display:flex;gap:26px;margin-left:auto;font-size:14.5px;color:var(--muted)}
+nav .links{display:flex;align-items:center;gap:26px;margin-left:auto;font-size:14.5px;color:var(--muted)}
 nav .links a{text-decoration:none;transition:color .2s}
 nav .links a:hover{color:var(--text)}
+nav .links a.btn,nav .links a.btn:hover{color:#fff;line-height:1.2}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:15px;color:#fff;background:var(--grad);padding:12px 24px;border-radius:999px;text-decoration:none;transition:transform .15s,box-shadow .25s,filter .2s;box-shadow:0 8px 28px rgba(80,90,255,.35)}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.08);box-shadow:0 12px 34px rgba(80,90,255,.5)}
 .btn:active{transform:scale(.98)}
@@ -114,6 +115,17 @@ h2{font-size:clamp(30px,4.6vw,48px);line-height:1.1;letter-spacing:-1.4px;font-w
 .dl.open .ask{display:none}
 @keyframes pop{from{opacity:0;transform:scale(.94)}}
 .small{font-size:13.5px;color:var(--muted)}
+.verify{max-width:640px;margin:26px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+.verify h4{font-size:16px;margin-bottom:4px}
+.verify p{color:var(--muted);font-size:14.5px}
+.verify .hash{display:flex;gap:10px;align-items:center;margin:14px 0 4px;background:#07070c;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.verify code{flex:1;min-width:0;font:13px/1.4 Consolas,"SF Mono",monospace;color:#d8d8e8;word-break:break-all}
+.verify button{flex:none;border:0;border-radius:8px;background:rgba(255,255,255,.1);color:var(--text);font:600 13px inherit;padding:7px 12px;cursor:pointer}
+.verify button:hover{background:rgba(255,255,255,.18)}
+.verify .vt{margin-top:10px}.verify .vt a{color:#9fb4ff}
+.verify details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.verify summary{cursor:pointer;color:var(--muted);font-size:14px}
+.verify details p{margin-top:8px}
 .note{margin-top:26px;padding:16px 18px;border-radius:14px;background:rgba(255,159,10,.08);border:1px solid rgba(255,159,10,.25);color:#e9c98f;font-size:14.5px;text-align:left}
 .note b{color:#ffd58a}
 
@@ -268,8 +280,15 @@ footer a{text-decoration:none}footer a:hover{color:var(--text)}
       </div>
     </div>
 
-    <div class="note" style="max-width:640px;margin-inline:auto">
-      <b>Windows meldet beim Start eventuell „Der Computer wurde durch Windows geschützt“.</b> Das liegt daran, dass das Setup noch nicht signiert ist. Klicke auf <b>Weitere Informationen</b> und dann auf <b>Trotzdem ausführen</b>.
+    <div class="verify rv" id="verify" hidden>
+      <h4>Datei prüfen</h4>
+      <p>Die Prüfsumme (SHA-256) der Setup-Datei. Wer sie selbst nachrechnet, sieht, dass die Datei unverändert ist.</p>
+      <div class="hash"><code id="hash"></code><button type="button" id="copyHash">Kopieren</button></div>
+      <p class="vt" id="vtRow" hidden><a id="vtLink" href="#" target="_blank" rel="noopener">Bei VirusTotal prüfen</a> · Ergebnis von rund 70 Prüfdiensten</p>
+      <details>
+        <summary>Hilfe beim Start</summary>
+        <p>Bei neuen Programmen fragt Windows (SmartScreen) vor dem ersten Start nach. Wähle <b>Weitere Informationen</b> und dann <b>Trotzdem ausführen</b>. Das Setup ist noch nicht digital signiert, deshalb erscheint die Rückfrage.</p>
+      </details>
     </div>
     <p class="small" style="margin-top:22px">Windows 10 oder 11 · 64 Bit · Beta</p>
   </div>
@@ -295,6 +314,20 @@ const API = 'https://jgadfqdxyosbgsomoepk.supabase.co';
 const KEY = 'sb_publishable_zTdMy5aGsxn2jxy1v9TOdg_ZL5HZXqJ';
 
 const $ = (id) => document.getElementById(id);
+
+// Prüfsumme und Prüf-Link aus release.json (öffentlich, enthält nur Version, Dateiname und Hash)
+fetch('release.json', { cache: 'no-store' }).then((r) => r.json()).then((rel) => {
+  if (!rel.sha256) return;
+  $('hash').textContent = rel.sha256;
+  $('verify').hidden = false;
+  if (rel.virustotal) {
+    $('vtLink').href = 'https://www.virustotal.com/gui/file/' + rel.sha256;
+    $('vtRow').hidden = false;
+  }
+  $('copyHash').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(rel.sha256); $('copyHash').textContent = 'Kopiert'; setTimeout(() => ($('copyHash').textContent = 'Kopieren'), 1800); } catch (_) {}
+  });
+}).catch(() => {});
 
 // Einblenden beim Scrollen
 const io = new IntersectionObserver((entries) => {

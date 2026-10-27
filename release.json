@@ -1,11 +1,11 @@
 {
-  "version": "5.0.5",
-  "file": "Kontoblick-Beta-Setup-5.0.5.exe",
-  "sha256": "4968e0abf11ade79a3c86a2c940c2aaf0357bf0d25456454aa548fb48dfff147",
-  "size": 17701888,
+  "version": "5.0.6",
+  "file": "Kontoblick-Beta-Setup-5.0.6.exe",
+  "sha256": "036b2cdebbcebed518896426f5e4dc403c2e44238d8a7549db2d7d0e488b1835",
+  "size": 17704448,
   "virustotal": false,
   "notes": [
-    "Behoben: PayPal und andere Banken lehnten die Abfrage wegen eines Datums in der Zukunft ab.",
-    "Screenshots im Feedback-Eingang lassen sich groß ansehen, zoomen und speichern."
+    "Vorgemerkte Zahlungen sind in den Buchungen deutlich markiert.",
+    "Eine für Montag vorgemerkte Zahlung erscheint schon am Freitag im laufenden Monat."
   ]
 }

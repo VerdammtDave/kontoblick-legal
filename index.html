@@ -128,6 +128,9 @@ h2{font-size:clamp(30px,4.6vw,48px);line-height:1.1;letter-spacing:-1.4px;font-w
 .dl.open .ask{display:none}
 @keyframes pop{from{opacity:0;transform:scale(.94)}}
 .small{font-size:13.5px;color:var(--muted)}
+.bar{height:10px;border-radius:6px;background:rgba(255,255,255,.1);overflow:hidden;margin:0 0 18px}
+.bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:6px;transition:width .15s}
+.btn[aria-busy=true]{opacity:.6;pointer-events:none}
 .verify{max-width:640px;margin:26px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px}
 .verify h4{font-size:16px;margin-bottom:4px}
 .verify p{color:var(--muted);font-size:14.5px}
@@ -287,7 +290,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--text)}
       </div>
       <div class="ready">
         <h3>Schlüssel gültig ✓</h3>
-        <p>Der Download startet gleich. Falls nicht, klick auf den Knopf.</p>
+        <p id="dlText">Der Download startet gleich. Falls nicht, klick auf den Knopf.</p>
+        <div class="bar" id="bar" hidden><i id="barFill"></i></div>
         <a class="btn" id="file" href="#">Setup herunterladen</a>
         <p class="small" style="margin-top:14px" id="fileInfo"></p>
       </div>
@@ -359,6 +363,52 @@ $('code').addEventListener('input', (e) => {
   $('msg').textContent = '';
 });
 
+// Lädt die Datei selbst und speichert sie unter ihrem Namen. Die Adressleiste und die Download-Liste
+// zeigen dann kontoblick.laudymedia.de statt der langen Speicher-Adresse. Bei Problemen klassischer Download.
+let saving = false;
+async function saveFile(j) {
+  if (saving) return;
+  saving = true;
+  const btn = $('file'), bar = $('bar'), fill = $('barFill'), text = $('dlText');
+  btn.setAttribute('aria-busy', 'true');
+  bar.hidden = false;
+  text.textContent = 'Lade herunter …';
+  try {
+    const res = await fetch(j.url);
+    if (!res.ok || !res.body) throw new Error('http ' + res.status);
+    const total = Number(res.headers.get('content-length')) || j.size || 0;
+    const reader = res.body.getReader();
+    const chunks = [];
+    let got = 0;
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      got += value.length;
+      if (total) {
+        fill.style.width = Math.min(100, (got / total) * 100) + '%';
+        text.textContent = 'Lade herunter … ' + Math.round((got / total) * 100) + ' %';
+      }
+    }
+    const blob = new Blob(chunks, { type: 'application/octet-stream' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = j.name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+    fill.style.width = '100%';
+    text.textContent = 'Fertig. Starte das Setup aus deinem Downloads-Ordner.';
+  } catch (_) {
+    text.textContent = 'Der Download wird anders gestartet …';
+    location.href = j.url;
+  } finally {
+    btn.removeAttribute('aria-busy');
+    saving = false;
+  }
+}
+
 function fail(text) {
   const m = $('msg');
   m.className = 'msg err';
@@ -387,7 +437,8 @@ $('form').addEventListener('submit', async (e) => {
     $('dl').classList.add('open');
     $('file').href = j.url;
     $('fileInfo').textContent = j.name + (j.size ? ' · ' + (j.size / 1048576).toFixed(1).replace('.', ',') + ' MB' : '');
-    setTimeout(() => { location.href = j.url; }, 700);
+    $('file').onclick = (ev) => { ev.preventDefault(); saveFile(j); };
+    setTimeout(() => saveFile(j), 700);
   } catch (_) {
     fail('Keine Verbindung. Bist du online?');
   } finally {

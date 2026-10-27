@@ -1,12 +1,12 @@
 {
-  "version": "4.9.7",
-  "file": "Kontoblick-Beta-Setup-4.9.7.exe",
-  "sha256": "c4a0869210ccb7de0f427633d382267a1be0b708c86736bf6e9c7236252033a6",
-  "size": 29945344,
+  "version": "5.0.0",
+  "file": "Kontoblick-Beta-Setup-5.0.0.exe",
+  "sha256": "fc465feaf3764244f209452d2f43ee13c8bf4d6e4c19383a2d52609d6173a63b",
+  "size": 17613312,
   "virustotal": false,
   "notes": [
-    "Rechnungen geprüft und korrigiert (Finanzplan, Monatsenden, Abos, Kategorien, Vormerkungen).",
-    "Neue Hilfe-Seite, verschlüsselte Datensicherung und Hinweis vor dem Ablauf der Bankfreigabe.",
-    "Besserer Schutz der gespeicherten Daten und verständlichere Fehlermeldungen."
+    "Family & Friends: bereit für den Einsatz im Freundes- und Familienkreis.",
+    "Geprüfte Rechnungen, neue Hilfe-Seite, verschlüsselte Datensicherung und Hinweis vor dem Ablauf der Bankfreigabe.",
+    "Beim ersten Start bestätigst du kurz Beta-Hinweis, Nutzungsbedingungen und Datenschutz."
   ]
 }

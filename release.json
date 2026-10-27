@@ -1,12 +1,13 @@
 {
-  "version": "5.0.7",
-  "file": "Kontoblick-Beta-Setup-5.0.7.exe",
-  "sha256": "ba65cfc5c683f140ccfb76fd8829f63b9e76c80dfd45171cbcfeeeb81ec70d97",
-  "size": 17793536,
+  "version": "5.0.8",
+  "file": "Kontoblick-Beta-Setup-5.0.8.exe",
+  "sha256": "7293af26858176576ca18378a002558474b523113e21158d622650ecc419b3d6",
+  "size": 17850368,
   "virustotal": false,
   "notes": [
-    "Kurze Windows-Benachrichtigungen für Updates, Antworten auf dein Feedback und ablaufende Bankfreigaben.",
-    "Neuer Feedback-Stand „Bitte testen“: Du kannst das Feedback danach selbst als erledigt markieren.",
-    "Antworten mit gleichzeitiger Änderung des Stands."
+    "Bargeldkonten (bis zu drei, mit eigenem Namen) und ein Diagramm hinter Verfügbar.",
+    "Profilbild, das nur für dich sichtbar ist, und ein neu sortiertes Profil.",
+    "Aktualisieren lädt nur noch Neues, und Zahlen springen dabei nicht mehr.",
+    "Neuer Feedback-Stand: Kommt im nächsten Update."
   ]
 }

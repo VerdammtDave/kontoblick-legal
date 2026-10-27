@@ -1,11 +1,10 @@
 {
-  "version": "4.9.2",
-  "file": "Kontoblick-Beta-Setup-4.9.2.exe",
-  "sha256": "894cc53b64104b2697a47cbead1df5734c4df6392f9d84867999dd4d50cca73e",
-  "size": 29854208,
+  "version": "4.9.3",
+  "file": "Kontoblick-Beta-Setup-4.9.3.exe",
+  "sha256": "f1a72e44166ebba474ed6d96744bce5e275f49ff05577c44d67d4a1ea8b26fa5",
+  "size": 29855744,
   "virustotal": false,
   "notes": [
-    "Profil als eigene Seite: Nutzername (alle 14 Tage änderbar), Profilfarbe, Passwort ändern, Konto löschen.",
-    "Neuer Slogan: \"Dein Konto im Blick\"."
+    "Weicheres Scrollen mit dem Mausrad: feine Schritte eines frei laufenden Rads kommen 1:1 an, schnelles Drehen beschleunigt."
   ]
 }

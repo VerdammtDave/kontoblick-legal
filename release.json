@@ -1,12 +1,12 @@
 {
-  "version": "5.0.2",
-  "file": "Kontoblick-Beta-Setup-5.0.2.exe",
-  "sha256": "44df0bca94de8305189789fce00118a270233e6cdcbd00d42b9a746f71853ac1",
-  "size": 17630720,
+  "version": "5.0.3",
+  "file": "Kontoblick-Beta-Setup-5.0.3.exe",
+  "sha256": "acdc20ad348507ffe872ed33fa3d00068ff71e0b79376aa74552ae70b4d397d9",
+  "size": 17632768,
   "virustotal": false,
   "notes": [
-    "Neu: Du siehst bei deinem Feedback den Stand (Eingegangen, In Arbeit, Nachfrage, Erledigt, Wird nicht umgesetzt).",
-    "Der Finanzplan rechnet mit deinem Gehaltsmonat und erkennt den Gehaltstag selbst.",
-    "Einladungs-Schlüssel werden in der Verwaltung maskiert angezeigt."
+    "Das Fenster lässt sich schon beim Starten und Laden verschieben, minimieren und schließen.",
+    "Schnelleres Laden der Umsätze: Monate werden zwei auf einmal geholt.",
+    "Die Oberfläche hängt beim Speichern der Daten nicht mehr."
   ]
 }

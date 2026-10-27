@@ -1,12 +1,12 @@
 {
   "version": "5.0.0",
   "file": "Kontoblick-Beta-Setup-5.0.0.exe",
-  "sha256": "fc465feaf3764244f209452d2f43ee13c8bf4d6e4c19383a2d52609d6173a63b",
-  "size": 17613312,
+  "sha256": "90d1992654034a2a5802b422e78f509c8c59d0e38cc8976d042ee5c2d6530065",
+  "size": 17620992,
   "virustotal": false,
   "notes": [
     "Family & Friends: bereit für den Einsatz im Freundes- und Familienkreis.",
     "Geprüfte Rechnungen, neue Hilfe-Seite, verschlüsselte Datensicherung und Hinweis vor dem Ablauf der Bankfreigabe.",
-    "Beim ersten Start bestätigst du kurz Beta-Hinweis, Nutzungsbedingungen und Datenschutz."
+    "Fenster öffnen im Vordergrund, Hinweis nach einem unerwarteten Beenden, deutlich kleineres Setup."
   ]
 }

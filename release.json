@@ -1,12 +1,12 @@
 {
-  "version": "5.0.3",
-  "file": "Kontoblick-Beta-Setup-5.0.3.exe",
-  "sha256": "acdc20ad348507ffe872ed33fa3d00068ff71e0b79376aa74552ae70b4d397d9",
-  "size": 17632768,
+  "version": "5.0.4",
+  "file": "Kontoblick-Beta-Setup-5.0.4.exe",
+  "sha256": "a99e1c46f738a1907492113da1c50000f76575a508e70cac4b57510a8198529e",
+  "size": 17698816,
   "virustotal": false,
   "notes": [
-    "Das Fenster lässt sich schon beim Starten und Laden verschieben, minimieren und schließen.",
-    "Schnelleres Laden der Umsätze: Monate werden zwei auf einmal geholt.",
-    "Die Oberfläche hängt beim Speichern der Daten nicht mehr."
+    "Besser eingeordnete Buchungen: viel weniger Sonstiges, dazu fünf neue Kategorien.",
+    "Sparquote nach Gehaltsmonat, Datenexport im Profil und die .pem-Datei lässt sich in die Einrichtung ziehen.",
+    "Kontoblick öffnet sich nur noch einmal, Links lassen sich kopieren."
   ]
 }

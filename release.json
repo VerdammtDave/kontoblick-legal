@@ -1,11 +1,12 @@
 {
-  "version": "5.0.6",
-  "file": "Kontoblick-Beta-Setup-5.0.6.exe",
-  "sha256": "036b2cdebbcebed518896426f5e4dc403c2e44238d8a7549db2d7d0e488b1835",
-  "size": 17704448,
+  "version": "5.0.7",
+  "file": "Kontoblick-Beta-Setup-5.0.7.exe",
+  "sha256": "ba65cfc5c683f140ccfb76fd8829f63b9e76c80dfd45171cbcfeeeb81ec70d97",
+  "size": 17793536,
   "virustotal": false,
   "notes": [
-    "Vorgemerkte Zahlungen sind in den Buchungen deutlich markiert.",
-    "Eine für Montag vorgemerkte Zahlung erscheint schon am Freitag im laufenden Monat."
+    "Kurze Windows-Benachrichtigungen für Updates, Antworten auf dein Feedback und ablaufende Bankfreigaben.",
+    "Neuer Feedback-Stand „Bitte testen“: Du kannst das Feedback danach selbst als erledigt markieren.",
+    "Antworten mit gleichzeitiger Änderung des Stands."
   ]
 }

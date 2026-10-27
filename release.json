@@ -1,12 +1,11 @@
 {
-  "version": "5.0.4",
-  "file": "Kontoblick-Beta-Setup-5.0.4.exe",
-  "sha256": "a99e1c46f738a1907492113da1c50000f76575a508e70cac4b57510a8198529e",
-  "size": 17698816,
+  "version": "5.0.5",
+  "file": "Kontoblick-Beta-Setup-5.0.5.exe",
+  "sha256": "4968e0abf11ade79a3c86a2c940c2aaf0357bf0d25456454aa548fb48dfff147",
+  "size": 17701888,
   "virustotal": false,
   "notes": [
-    "Besser eingeordnete Buchungen: viel weniger Sonstiges, dazu fünf neue Kategorien.",
-    "Sparquote nach Gehaltsmonat, Datenexport im Profil und die .pem-Datei lässt sich in die Einrichtung ziehen.",
-    "Kontoblick öffnet sich nur noch einmal, Links lassen sich kopieren."
+    "Behoben: PayPal und andere Banken lehnten die Abfrage wegen eines Datums in der Zukunft ab.",
+    "Screenshots im Feedback-Eingang lassen sich groß ansehen, zoomen und speichern."
   ]
 }

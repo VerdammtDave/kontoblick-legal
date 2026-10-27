@@ -6,7 +6,7 @@
 <p class="meta"><a href="datenschutz.html">Deutsch</a> · Kontoblick · Last updated: 27 October 2026</p>
 
 <h2>1. What Kontoblick is</h2>
-<p>Kontoblick is a personal finance application that runs locally on the user's own computer. It shows account balances and transactions from the user's own bank accounts. It is operated by a private individual for personal, non-commercial use and has no server of its own.</p>
+<p>Kontoblick is a personal finance application that runs locally on the user's own computer. It shows account balances and transactions from the user's own bank accounts. It is operated by a private individual for personal, non-commercial use. It has no server that receives account or transaction data. A small cloud service (Supabase) is used only for invitation keys and for feedback sent from within the app.</p>
 
 <h2>2. Controller</h2>
 <p>David Böckler, Germany<br>Contact: <a href="mailto:kontoblick@laudymedia.de">kontoblick@laudymedia.de</a></p>
@@ -16,22 +16,24 @@
 <li><strong>Account information</strong> retrieved through the Enable Banking API after the user has explicitly authorised access at their bank: account name, IBAN, balances, and transactions (date, amount, counterparty name, payment reference).</li>
 <li><strong>Enable Banking credentials</strong> (application ID and private key) entered by the user.</li>
 <li><strong>User settings</strong> such as selected months and categories.</li>
+<li><strong>Feedback</strong> you choose to send from within the app: type (bug, idea, feedback), your message, an optional name, an optional screenshot, the app version, and a random device ID generated on your device. If you leave the name empty, the message is anonymous. Please make sure a screenshot shows no account data.</li>
+<li><strong>Invitation keys</strong>: the key you enter, the random device ID and the time of redemption.</li>
 </ul>
 
 <h2>4. Where the data is stored</h2>
-<p>All data is stored <strong>only on the user's own device</strong>, in an encrypted file (AES-256-GCM). The encryption key is kept in the operating system's secure credential store. No data is sent to the operator of Kontoblick, and there is no analytics, tracking, advertising or crash reporting.</p>
+<p>Account, transaction and settings data is stored <strong>only on the user's own device</strong>, in an encrypted file (AES-256-GCM). The encryption key is kept in the operating system's secure credential store. No account data, transactions or Enable Banking credentials are ever sent to the operator of Kontoblick, and there is no analytics, tracking, advertising or crash reporting. Only feedback you send yourself and invitation-key data (see section 3) are stored on a server.</p>
 
 <h2>5. Who receives data</h2>
-<p>Kontoblick communicates directly from the user's device with Enable Banking (api.enablebanking.com) to retrieve account information, and with the user's bank during authorisation. Enable Banking acts as the account information service provider; its own privacy policy applies to that processing. Data is not sold, shared or disclosed to any other party.</p>
+<p>Kontoblick communicates directly from the user's device with Enable Banking (api.enablebanking.com) to retrieve account information, and with the user's bank during authorisation. Enable Banking acts as the account information service provider; its own privacy policy applies to that processing. Feedback and invitation-key data are stored with Supabase (EU region, Frankfurt), which acts as a processor on behalf of the operator. Data is not sold, shared or disclosed to any other party.</p>
 
 <h2>6. Legal basis</h2>
-<p>Processing takes place on the user's own instruction and consent (Art. 6(1)(a) and (b) GDPR). Access to bank data is always granted by the user at their bank and can be withdrawn at any time.</p>
+<p>Account information is processed on the user's own instruction and consent (Art. 6(1)(a) and (b) GDPR). Feedback is processed on the basis of your consent by sending it (Art. 6(1)(a)); invitation keys are processed for the legitimate interest of limiting the beta to invited users (Art. 6(1)(f)). Access to bank data is always granted by the user at their bank and can be withdrawn at any time.</p>
 
 <h2>7. Retention and deletion</h2>
-<p>Data stays on the device until the user deletes it. Disconnecting a bank in the application removes the connection; uninstalling the application and deleting its data folder removes all stored data. Bank-side consent can additionally be revoked at the user's bank.</p>
+<p>Data stays on the device until the user deletes it. Disconnecting a bank in the application removes the connection; uninstalling the application and deleting its data folder removes all stored data. Bank-side consent can additionally be revoked at the user's bank. Feedback and its replies are kept as long as needed to answer and improve the app and are deleted on request. Invitation-key records are kept while the key is in use. Because anonymous feedback cannot be assigned to a person, please quote the text of your message if you want it deleted.</p>
 
 <h2>8. Your rights</h2>
-<p>Because the operator does not receive or hold the user's data, access, correction and deletion are performed directly in the application. For any question you can contact the controller above. You also have the right to lodge a complaint with a data protection supervisory authority.</p>
+<p>Because the operator does not receive or hold account and transaction data, access, correction and deletion of that data are performed directly in the application. For feedback and invitation keys, contact the controller. For any question you can contact the controller above. You also have the right to lodge a complaint with a data protection supervisory authority.</p>
 
 <h2>9. Changes</h2>
 <p>This policy may be updated when the application changes. The date above shows the latest version.</p>

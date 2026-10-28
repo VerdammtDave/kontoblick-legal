@@ -1,12 +1,139 @@
 {
-  "version": "5.0.10",
-  "file": "Kontoblick-Beta-Setup-5.0.10.exe",
-  "sha256": "84ff780c4a4a461d681c0fbb09f269cf25e6d0aee18e0ebb38333985b8a31a24",
-  "size": 18010624,
-  "virustotal": false,
-  "notes": [
-    "Neu: Anzeigename im Profil, der mit deinem Feedback mitgeschickt wird.",
-    "Neu: X kann Kontoblick in den Infobereich schicken (Profil, Fenster), mit eigenem Menü und Animation.",
-    "Verständliche Meldung und Neu verbinden, wenn die Freigabe bei der Bank nicht mehr gültig ist."
-  ]
+    "version":  "5.0.11",
+    "file":  "Kontoblick-Beta-Setup-5.0.11.exe",
+    "sha256":  "ada7787ddea0770f1e849df335cdd7529f947d911bfa77ceb96d726c8875256f",
+    "size":  18007552,
+    "virustotal":  false,
+    "notes":  [
+                  "Behoben: Das Update über die Setup-Datei beendet Kontoblick jetzt auch dann, wenn es im Infobereich der Taskleiste läuft.,Neu: Der Update-Hinweis zeigt alle Neuerungen seit deiner Version, auch wenn du Versionen übersprungen hast."
+              ],
+    "history":  [
+                    {
+                        "version":  "5.0.11",
+                        "notes":  [
+                                      "Behoben: Das Update über die Setup-Datei beendet Kontoblick jetzt auch dann, wenn es im Infobereich der Taskleiste läuft.,Neu: Der Update-Hinweis zeigt alle Neuerungen seit deiner Version, auch wenn du Versionen übersprungen hast."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.10",
+                        "notes":  [
+                                      "Neu: Anzeigename im Profil, der mit deinem Feedback mitgeschickt wird.",
+                                      "Neu: X kann Kontoblick in den Infobereich schicken (Profil, Fenster), mit eigenem MenÃƒÂ¼ und Animation.",
+                                      "VerstÃƒÂ¤ndliche Meldung und Neu verbinden, wenn die Freigabe bei der Bank nicht mehr gÃƒÂ¼ltig ist."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.9",
+                        "notes":  [
+                                      "Das Diagramm hinter VerfÃƒÂ¼gbar passt sich jetzt dem gewÃƒÂ¤hlten Monat an."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.8",
+                        "notes":  [
+                                      "Bargeldkonten (bis zu drei, mit eigenem Namen) und ein Diagramm hinter VerfÃƒÂ¼gbar.",
+                                      "Profilbild, das nur fÃƒÂ¼r dich sichtbar ist, und ein neu sortiertes Profil.",
+                                      "Aktualisieren lÃƒÂ¤dt nur noch Neues, und Zahlen springen dabei nicht mehr.",
+                                      "Neuer Feedback-Stand: Kommt im nÃƒÂ¤chsten Update."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.7",
+                        "notes":  [
+                                      "Kurze Windows-Benachrichtigungen fÃƒÂ¼r Updates, Antworten auf dein Feedback und ablaufende Bankfreigaben.",
+                                      "Neuer Feedback-Stand Ã¢â‚¬Å¾Bitte testenÃ¢â‚¬Å“: Du kannst das Feedback danach selbst als erledigt markieren.",
+                                      "Antworten mit gleichzeitiger Ãƒâ€žnderung des Stands."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.6",
+                        "notes":  [
+                                      "Vorgemerkte Zahlungen sind in den Buchungen deutlich markiert.",
+                                      "Eine fÃƒÂ¼r Montag vorgemerkte Zahlung erscheint schon am Freitag im laufenden Monat."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.5",
+                        "notes":  [
+                                      "Behoben: PayPal und andere Banken lehnten die Abfrage wegen eines Datums in der Zukunft ab.",
+                                      "Screenshots im Feedback-Eingang lassen sich groÃƒÅ¸ ansehen, zoomen und speichern."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.4",
+                        "notes":  [
+                                      "Besser eingeordnete Buchungen: viel weniger Sonstiges, dazu fÃƒÂ¼nf neue Kategorien.",
+                                      "Sparquote nach Gehaltsmonat, Datenexport im Profil und die .pem-Datei lÃƒÂ¤sst sich in die Einrichtung ziehen.",
+                                      "Kontoblick ÃƒÂ¶ffnet sich nur noch einmal, Links lassen sich kopieren."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.3",
+                        "notes":  [
+                                      "Das Fenster lÃƒÂ¤sst sich schon beim Starten und Laden verschieben, minimieren und schlieÃƒÅ¸en.",
+                                      "Schnelleres Laden der UmsÃƒÂ¤tze: Monate werden zwei auf einmal geholt.",
+                                      "Die OberflÃƒÂ¤che hÃƒÂ¤ngt beim Speichern der Daten nicht mehr."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.2",
+                        "notes":  [
+                                      "Neu: Du siehst bei deinem Feedback den Stand (Eingegangen, In Arbeit, Nachfrage, Erledigt, Wird nicht umgesetzt).",
+                                      "Der Finanzplan rechnet mit deinem Gehaltsmonat und erkennt den Gehaltstag selbst.",
+                                      "Einladungs-SchlÃƒÂ¼ssel werden in der Verwaltung maskiert angezeigt."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.1",
+                        "notes":  [
+                                      "Der Finanzplan rechnet mit deinem Gehaltsmonat: Dein Monat beginnt an dem Tag, an dem dein Gehalt kommt.",
+                                      "Der Gehaltstag wird automatisch erkannt und lÃƒÂ¤sst sich im Finanzplan ÃƒÂ¤ndern.",
+                                      "Behoben: Die Stichtage Anfang und Mitte Monat berÃƒÂ¼cksichtigen jetzt das Gehalt und das Budget der Tage danach."
+                                  ]
+                    },
+                    {
+                        "version":  "5.0.0",
+                        "notes":  [
+                                      "Family \u0026 Friends: bereit fÃƒÂ¼r den Einsatz im Freundes- und Familienkreis.",
+                                      "GeprÃƒÂ¼fte Rechnungen, neue Hilfe-Seite, verschlÃƒÂ¼sselte Datensicherung und Hinweis vor dem Ablauf der Bankfreigabe.",
+                                      "Fenster ÃƒÂ¶ffnen im Vordergrund, Hinweis nach einem unerwarteten Beenden, deutlich kleineres Setup."
+                                  ]
+                    },
+                    {
+                        "version":  "4.9.7",
+                        "notes":  [
+                                      "Rechnungen geprÃƒÂ¼ft und korrigiert (Finanzplan, Monatsenden, Abos, Kategorien, Vormerkungen).",
+                                      "Neue Hilfe-Seite, verschlÃƒÂ¼sselte Datensicherung und Hinweis vor dem Ablauf der Bankfreigabe.",
+                                      "Besserer Schutz der gespeicherten Daten und verstÃƒÂ¤ndlichere Fehlermeldungen."
+                                  ]
+                    },
+                    {
+                        "version":  "4.9.3",
+                        "notes":  [
+                                      "Weicheres Scrollen mit dem Mausrad: feine Schritte eines frei laufenden Rads kommen 1:1 an, schnelles Drehen beschleunigt."
+                                  ]
+                    },
+                    {
+                        "version":  "4.9.2",
+                        "notes":  [
+                                      "Profil als eigene Seite: Nutzername (alle 14 Tage ÃƒÂ¤nderbar), Profilfarbe, Passwort ÃƒÂ¤ndern, Konto lÃƒÂ¶schen.",
+                                      "Neuer Slogan: \"Dein Konto im Blick\"."
+                                  ]
+                    },
+                    {
+                        "version":  "4.9.1",
+                        "notes":  [
+                                      "Neu: optionales Profil mit Nutzername und Farbe. Ohne Konto bleibst du voll anonym.",
+                                      "Neue Feedback-Art \"Optik\". E-Mail-Adressen werden nie ausgeschrieben.",
+                                      "\"Wiederkehrend\" heiÃƒÅ¸t jetzt kurz \"Abos\"."
+                                  ]
+                    },
+                    {
+                        "version":  "4.9.0",
+                        "notes":  [
+                                      "Updates direkt in der App: neue Version sehen, ein Klick, App startet neu.",
+                                      "Neue Startanimation und ein kurzer Rundgang durch die wichtigsten Bereiche."
+                                  ]
+                    }
+                ]
 }

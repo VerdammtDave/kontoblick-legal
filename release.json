@@ -1,10 +1,12 @@
 {
-  "version": "5.0.9",
-  "file": "Kontoblick-Beta-Setup-5.0.9.exe",
-  "sha256": "71730467baf202c23a6641a8a52dd5ff76229e4bd21c03f6f8e3226071776e8d",
-  "size": 17850880,
+  "version": "5.0.10",
+  "file": "Kontoblick-Beta-Setup-5.0.10.exe",
+  "sha256": "84ff780c4a4a461d681c0fbb09f269cf25e6d0aee18e0ebb38333985b8a31a24",
+  "size": 18010624,
   "virustotal": false,
   "notes": [
-    "Das Diagramm hinter Verfügbar passt sich jetzt dem gewählten Monat an."
+    "Neu: Anzeigename im Profil, der mit deinem Feedback mitgeschickt wird.",
+    "Neu: X kann Kontoblick in den Infobereich schicken (Profil, Fenster), mit eigenem Menü und Animation.",
+    "Verständliche Meldung und Neu verbinden, wenn die Freigabe bei der Bank nicht mehr gültig ist."
   ]
 }

@@ -1,13 +1,23 @@
 {
-    "version":  "5.1.2",
-    "file":  "Kontoblick-Beta-Setup-5.1.2.exe",
-    "sha256":  "1c8596a316ac290f734c70a9761ede7d0e95e22a4ab994347df8d994ad39e87b",
-    "size":  17950208,
+    "version":  "5.1.4",
+    "file":  "Kontoblick-Beta-Setup-5.1.4.exe",
+    "sha256":  "c6997d736d59ca4947ae881d3e4cf7ce46eb5d5a8adc20d844d3301ba4f9abe2",
+    "size":  17958400,
     "virustotal":  false,
     "notes":  [
-                  "Behoben: Beim Verbinden einer Bank oder beim Aktualisieren erschien manchmal \"Connection closed before full header was received\". Kontoblick versucht es bei einer unterbrochenen Verbindung jetzt automatisch noch einmal. Hilft das nicht, steht eine verständliche Meldung da, was du prüfen kannst (Internet, VPN, Firewall, Virenscanner)."
+                  "Behoben: Buchungen vom selben Tag bleiben jetzt in einer festen Reihenfolge (zuerst nach Datum und Uhrzeit) und springen nicht mehr durcheinander.",
+                  "Behoben: Der Hinweis über ein unerwartetes Beenden erschien manchmal ohne Grund, zum Beispiel nach einem Update.",
+                  "Behoben: Ändert man bei einer eigenen Buchung das Datum, bleibt die Uhrzeit erhalten."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.4",
+                        "notes":  [
+                                      "Behoben: Buchungen vom selben Tag bleiben jetzt in einer festen Reihenfolge (zuerst nach Datum und Uhrzeit) und springen nicht mehr durcheinander.",
+                                      "Behoben: Der Hinweis über ein unerwartetes Beenden erschien manchmal ohne Grund, zum Beispiel nach einem Update.",
+                                      "Behoben: Ändert man bei einer eigenen Buchung das Datum, bleibt die Uhrzeit erhalten."
+                                  ]
+                    },
                     {
                         "version":  "5.1.2",
                         "notes":  [

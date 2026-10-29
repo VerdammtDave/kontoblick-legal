@@ -1,15 +1,21 @@
 {
-    "version":  "5.1.4",
-    "file":  "Kontoblick-Beta-Setup-5.1.4.exe",
-    "sha256":  "c6997d736d59ca4947ae881d3e4cf7ce46eb5d5a8adc20d844d3301ba4f9abe2",
-    "size":  17958400,
+    "version":  "5.1.5",
+    "file":  "Kontoblick-Beta-Setup-5.1.5.exe",
+    "sha256":  "4ed14d7fc41e01c7413e228205ba782aab37d9e254fd46758c2f8e05bae2e18c",
+    "size":  17970176,
     "virustotal":  false,
     "notes":  [
-                  "Behoben: Buchungen vom selben Tag bleiben jetzt in einer festen Reihenfolge (zuerst nach Datum und Uhrzeit) und springen nicht mehr durcheinander.",
-                  "Behoben: Der Hinweis über ein unerwartetes Beenden erschien manchmal ohne Grund, zum Beispiel nach einem Update.",
-                  "Behoben: Ändert man bei einer eigenen Buchung das Datum, bleibt die Uhrzeit erhalten."
+                  "Neu: Wer Kontoblick mit einem Schlüssel nutzt, kann jetzt selbst bis zu 2 Personen einladen (Feedback, Bereich Einladen). Du siehst, ob Einladungen offen oder eingelöst sind, kannst unbenutzte zurücknehmen und eingelöste sperren. Wer eingeladen wurde, kann nicht weiter einladen.",
+                  "Datenschutz: Der Entwickler sieht nur Anzahlen, nie Namen. Deine Notiz zu einer Einladung bleibt auf deinem Computer."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.5",
+                        "notes":  [
+                                      "Neu: Wer Kontoblick mit einem Schlüssel nutzt, kann jetzt selbst bis zu 2 Personen einladen (Feedback, Bereich Einladen). Du siehst, ob Einladungen offen oder eingelöst sind, kannst unbenutzte zurücknehmen und eingelöste sperren. Wer eingeladen wurde, kann nicht weiter einladen.",
+                                      "Datenschutz: Der Entwickler sieht nur Anzahlen, nie Namen. Deine Notiz zu einer Einladung bleibt auf deinem Computer."
+                                  ]
+                    },
                     {
                         "version":  "5.1.4",
                         "notes":  [

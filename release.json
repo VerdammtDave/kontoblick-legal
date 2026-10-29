@@ -1,16 +1,19 @@
 {
-    "version":  "5.1.6",
-    "file":  "Kontoblick-Beta-Setup-5.1.6.exe",
-    "sha256":  "98083caebf2a42abd785863e963ac108cebc6943dfa73175ea34d9a31588b9cf",
-    "size":  17974784,
+    "version":  "5.1.7",
+    "file":  "Kontoblick-Beta-Setup-5.1.7.exe",
+    "sha256":  "59d610c571f11a365aa8541044006a7962412c819e67ca72615c3ba3444aa3a8",
+    "size":  17976832,
     "virustotal":  false,
     "notes":  [
-                  "Behoben: Buchungen vom selben Tag stehen jetzt in der richtigen Reihenfolge (neueste oben), auch bei Banken, die ihre Umsätze mit der ältesten zuerst liefern. Vorgemerkte Buchungen stehen am jeweiligen Tag ganz oben.",
-                  "Neu (zum Testen): Bei Buchungen steht die Uhrzeit, sofern die Bank eine mitliefert. Eigene Buchungen zeigen immer ihre Uhrzeit.",
-                  "Verbessert: Die Anleitung für Enable Banking ist kürzer und einfacher. Alle Angaben, die dort einzutragen sind, lassen sich mit einem Klick kopieren.",
-                  "Neu: Bei Rückmeldungen gibt es den Stand Kommt später."
+                  "Neu: Kontoblick merkt sich die Größe des Fensters (und ob es maximiert war) und öffnet beim nächsten Start genau so, statt immer in der Standardgröße."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.7",
+                        "notes":  [
+                                      "Neu: Kontoblick merkt sich die Größe des Fensters (und ob es maximiert war) und öffnet beim nächsten Start genau so, statt immer in der Standardgröße."
+                                  ]
+                    },
                     {
                         "version":  "5.1.6",
                         "notes":  [

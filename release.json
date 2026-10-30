@@ -1,13 +1,27 @@
 {
-    "version":  "5.1.7",
-    "file":  "Kontoblick-Beta-Setup-5.1.7.exe",
-    "sha256":  "59d610c571f11a365aa8541044006a7962412c819e67ca72615c3ba3444aa3a8",
-    "size":  17976832,
+    "version":  "5.1.8",
+    "file":  "Kontoblick-Beta-Setup-5.1.8.exe",
+    "sha256":  "01bd16af29a9763cfb0356f5a5c42279fcb9167dc0391ba68e3890fa3f19dd24",
+    "size":  17982464,
     "virustotal":  false,
     "notes":  [
-                  "Neu: Kontoblick merkt sich die Größe des Fensters (und ob es maximiert war) und öffnet beim nächsten Start genau so, statt immer in der Standardgröße."
+                  "Neu: Läuft bei Kontoblick oder der Bank-Anbindung gerade etwas nicht rund, erscheint oben im Fenster eine farbige Meldung (rot bei Störungen, orange bei Warnungen, blau bei Hinweisen). Sie verschwindet von selbst, sobald das Problem behoben ist.",
+                  "Behoben: Die Fenstergröße wird jetzt zuverlässig gemerkt, auch wenn man Kontoblick über X schließt.",
+                  "Behoben: Beim Start kommt das Fenster nur noch ein einziges Mal nach vorn.",
+                  "Behoben: Ein Rechtsklick auf das Kontoblick-Symbol neben der Uhr lässt ein offenes Fenster jetzt in Ruhe und zeigt das normale Windows-Menü.",
+                  "Behoben: Startest du Kontoblick, obwohl es schon läuft, öffnet sich kein zweites Fenster mehr, das kurz aufpoppt. Das vorhandene Fenster kommt nach vorn."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.8",
+                        "notes":  [
+                                      "Neu: Läuft bei Kontoblick oder der Bank-Anbindung gerade etwas nicht rund, erscheint oben im Fenster eine farbige Meldung (rot bei Störungen, orange bei Warnungen, blau bei Hinweisen). Sie verschwindet von selbst, sobald das Problem behoben ist.",
+                                      "Behoben: Die Fenstergröße wird jetzt zuverlässig gemerkt, auch wenn man Kontoblick über X schließt.",
+                                      "Behoben: Beim Start kommt das Fenster nur noch ein einziges Mal nach vorn.",
+                                      "Behoben: Ein Rechtsklick auf das Kontoblick-Symbol neben der Uhr lässt ein offenes Fenster jetzt in Ruhe und zeigt das normale Windows-Menü.",
+                                      "Behoben: Startest du Kontoblick, obwohl es schon läuft, öffnet sich kein zweites Fenster mehr, das kurz aufpoppt. Das vorhandene Fenster kommt nach vorn."
+                                  ]
+                    },
                     {
                         "version":  "5.1.7",
                         "notes":  [

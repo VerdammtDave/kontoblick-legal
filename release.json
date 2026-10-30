@@ -1,13 +1,19 @@
 {
-    "version":  "5.1.9",
-    "file":  "Kontoblick-Beta-Setup-5.1.9.exe",
-    "sha256":  "cfe8105aef3b251d990c6dcc2bec328f9c11d3748bf19ab1c3c60e46d739b4d1",
-    "size":  17981952,
+    "version":  "5.1.10",
+    "file":  "Kontoblick-Beta-Setup-5.1.10.exe",
+    "sha256":  "ef6015f5cff7f5397705fc34f8d732ad4b79a6200e42ffcf0eed1725adc1fe0f",
+    "size":  17983488,
     "virustotal":  false,
     "notes":  [
-                  "Verbessert: Die Live-Meldung oben im Fenster hat jetzt eine fette Überschrift und darunter den Text, damit man sofort sieht, worum es geht."
+                  "Neu: Vorgemerkte Buchungen stehen jetzt getrennt von den gebuchten. In der Übersicht steht unter Letzte Buchungen eine Zeile Vorgemerkte Buchungen zum Aus- und Einklappen, auf der Seite Buchungen steht sie über den Tageslisten."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.10",
+                        "notes":  [
+                                      "Neu: Vorgemerkte Buchungen stehen jetzt getrennt von den gebuchten. In der Übersicht steht unter Letzte Buchungen eine Zeile Vorgemerkte Buchungen zum Aus- und Einklappen, auf der Seite Buchungen steht sie über den Tageslisten."
+                                  ]
+                    },
                     {
                         "version":  "5.1.9",
                         "notes":  [

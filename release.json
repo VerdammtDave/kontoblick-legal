@@ -1,13 +1,19 @@
 {
-    "version":  "5.1.11",
-    "file":  "Kontoblick-Beta-Setup-5.1.11.exe",
-    "sha256":  "b4ce77ec9a09a5b4babafebb2fda1e6dd77a6be387bee1de903b24d6aaf836bf",
-    "size":  17987584,
+    "version":  "5.1.12",
+    "file":  "Kontoblick-Beta-Setup-5.1.12.exe",
+    "sha256":  "adbc0dab14f73b43a3a3ebf048ea0f865f0bbcfd677bb640c2e4fd0eb4d01595",
+    "size":  18003456,
     "virustotal":  false,
     "notes":  [
-                  "Verbessert: Beträge lassen sich jetzt auch mit Punkt statt Komma eingeben (zum Beispiel 12.50), etwa bei Schulden, Sparzielen, Budgets, Buchungen und im Plan. Die Schreibweise mit Komma und Tausenderpunkt (1.234,56) funktioniert weiter."
+                  "Behoben: Die Meldung „Die letzte Sitzung wurde nicht sauber beendet“ erschien manchmal beim Start, obwohl nichts schiefgelaufen war, zum Beispiel wenn Windows heruntergefahren oder du abgemeldet wurdest, während Kontoblick offen war. Das zählt jetzt als normales Beenden. Taucht die Meldung trotzdem noch auf, gib das bitte unter „Feedback“ als Fehler an."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.12",
+                        "notes":  [
+                                      "Behoben: Die Meldung „Die letzte Sitzung wurde nicht sauber beendet“ erschien manchmal beim Start, obwohl nichts schiefgelaufen war, zum Beispiel wenn Windows heruntergefahren oder du abgemeldet wurdest, während Kontoblick offen war. Das zählt jetzt als normales Beenden. Taucht die Meldung trotzdem noch auf, gib das bitte unter „Feedback“ als Fehler an."
+                                  ]
+                    },
                     {
                         "version":  "5.1.11",
                         "notes":  [

@@ -1,13 +1,19 @@
 {
-    "version":  "5.1.10",
-    "file":  "Kontoblick-Beta-Setup-5.1.10.exe",
-    "sha256":  "ef6015f5cff7f5397705fc34f8d732ad4b79a6200e42ffcf0eed1725adc1fe0f",
-    "size":  17983488,
+    "version":  "5.1.11",
+    "file":  "Kontoblick-Beta-Setup-5.1.11.exe",
+    "sha256":  "b4ce77ec9a09a5b4babafebb2fda1e6dd77a6be387bee1de903b24d6aaf836bf",
+    "size":  17987584,
     "virustotal":  false,
     "notes":  [
-                  "Neu: Vorgemerkte Buchungen stehen jetzt getrennt von den gebuchten. In der Übersicht steht unter Letzte Buchungen eine Zeile Vorgemerkte Buchungen zum Aus- und Einklappen, auf der Seite Buchungen steht sie über den Tageslisten."
+                  "Verbessert: Beträge lassen sich jetzt auch mit Punkt statt Komma eingeben (zum Beispiel 12.50), etwa bei Schulden, Sparzielen, Budgets, Buchungen und im Plan. Die Schreibweise mit Komma und Tausenderpunkt (1.234,56) funktioniert weiter."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.11",
+                        "notes":  [
+                                      "Verbessert: Beträge lassen sich jetzt auch mit Punkt statt Komma eingeben (zum Beispiel 12.50), etwa bei Schulden, Sparzielen, Budgets, Buchungen und im Plan. Die Schreibweise mit Komma und Tausenderpunkt (1.234,56) funktioniert weiter."
+                                  ]
+                    },
                     {
                         "version":  "5.1.10",
                         "notes":  [

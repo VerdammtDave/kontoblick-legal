@@ -1,13 +1,29 @@
 {
-    "version":  "5.1.13",
-    "file":  "Kontoblick-Beta-Setup-5.1.13.exe",
-    "sha256":  "17f0d8209c693c52b7d1f66a994545a9343475f413457866837d812a30c4fe95",
-    "size":  18012672,
+    "version":  "5.1.14",
+    "file":  "Kontoblick-Beta-Setup-5.1.14.exe",
+    "sha256":  "96db5c7c23ac086208f79f2531133ac57128b55cf8481fd40575469cf7c15f56",
+    "size":  18025472,
     "virustotal":  false,
     "notes":  [
-                  "Neu: Dev-Kanal für ausgewählte Tester. Wer dafür freigeschaltet ist, kann unter „Updates“ zwischen Stable und Dev wechseln, Test-Versionen laden und melden, ob ein Fehler behoben ist. Für alle anderen ändert sich nichts."
+                  "Behoben: Sparkonten werden nicht mehr mitgerechnet. Kontoblick erkennt sie jetzt selbst, an der Kontoart der Bank oder am Namen (Sparkonto, Tagesgeld, Festgeld, Savings ...). Nicht jedes Sparkonto wird erkannt: Mit dem Schalter bei den Konten stellst du es jederzeit selbst ein.",
+                  "Behoben: Konten mit seltsamen Bezeichnungen der Bank (Codes, Zahlenfolgen, Großbuchstaben) bekommen einen lesbaren Namen, zum Beispiel „Sparkonto ··1234“.",
+                  "Behoben: Kommt das Gehalt am Monatsende mal ein, zwei Tage früher, zählt es jetzt zum richtigen Gehaltsmonat. Vorher stand dort „Keine Einnahmen“, und die Prognose im Finanzplan rutschte ins Minus. Ist das Gehalt ein paar Tage überfällig, rechnet der Finanzplan mit „heute“ statt ohne Einnahmen.",
+                  "Behoben: Cashflow-Vorschau bei Einnahmen am Monatsende. Das Gehalt wird am üblichen Tag erwartet (zum Beispiel am 30.) und nicht mehr Tag für Tag nach vorn geschoben. Ist es ein paar Tage überfällig, steht es heute in der Vorschau, statt ganz zu fehlen.",
+                  "Neu: „Das ist eine Einnahme“. In einer Einnahme-Buchung lässt sich festlegen, dass sie regelmäßig kommt (zum Beispiel Gehalt). Sie zählt dann in Cashflow und Finanzplan als monatliche Einnahme, auch wenn die automatische Erkennung sie nicht findet, etwa weil der Name wechselt oder die Beträge schwanken.",
+                  "Neu: „Sonstiges aufräumen“ bei den Buchungen. Kontoblick zeigt die Händler aus „Sonstiges“ nacheinander, du wählst eine Kategorie, und sie gilt für alle bisherigen und künftigen Buchungen dieses Händlers."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.14",
+                        "notes":  [
+                                      "Behoben: Sparkonten werden nicht mehr mitgerechnet. Kontoblick erkennt sie jetzt selbst, an der Kontoart der Bank oder am Namen (Sparkonto, Tagesgeld, Festgeld, Savings ...). Nicht jedes Sparkonto wird erkannt: Mit dem Schalter bei den Konten stellst du es jederzeit selbst ein.",
+                                      "Behoben: Konten mit seltsamen Bezeichnungen der Bank (Codes, Zahlenfolgen, Großbuchstaben) bekommen einen lesbaren Namen, zum Beispiel „Sparkonto ··1234“.",
+                                      "Behoben: Kommt das Gehalt am Monatsende mal ein, zwei Tage früher, zählt es jetzt zum richtigen Gehaltsmonat. Vorher stand dort „Keine Einnahmen“, und die Prognose im Finanzplan rutschte ins Minus. Ist das Gehalt ein paar Tage überfällig, rechnet der Finanzplan mit „heute“ statt ohne Einnahmen.",
+                                      "Behoben: Cashflow-Vorschau bei Einnahmen am Monatsende. Das Gehalt wird am üblichen Tag erwartet (zum Beispiel am 30.) und nicht mehr Tag für Tag nach vorn geschoben. Ist es ein paar Tage überfällig, steht es heute in der Vorschau, statt ganz zu fehlen.",
+                                      "Neu: „Das ist eine Einnahme“. In einer Einnahme-Buchung lässt sich festlegen, dass sie regelmäßig kommt (zum Beispiel Gehalt). Sie zählt dann in Cashflow und Finanzplan als monatliche Einnahme, auch wenn die automatische Erkennung sie nicht findet, etwa weil der Name wechselt oder die Beträge schwanken.",
+                                      "Neu: „Sonstiges aufräumen“ bei den Buchungen. Kontoblick zeigt die Händler aus „Sonstiges“ nacheinander, du wählst eine Kategorie, und sie gilt für alle bisherigen und künftigen Buchungen dieses Händlers."
+                                  ]
+                    },
                     {
                         "version":  "5.1.13",
                         "notes":  [

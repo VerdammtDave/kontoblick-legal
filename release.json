@@ -1,13 +1,19 @@
 {
-    "version":  "5.1.12",
-    "file":  "Kontoblick-Beta-Setup-5.1.12.exe",
-    "sha256":  "adbc0dab14f73b43a3a3ebf048ea0f865f0bbcfd677bb640c2e4fd0eb4d01595",
-    "size":  18003456,
+    "version":  "5.1.13",
+    "file":  "Kontoblick-Beta-Setup-5.1.13.exe",
+    "sha256":  "17f0d8209c693c52b7d1f66a994545a9343475f413457866837d812a30c4fe95",
+    "size":  18012672,
     "virustotal":  false,
     "notes":  [
-                  "Behoben: Die Meldung „Die letzte Sitzung wurde nicht sauber beendet“ erschien manchmal beim Start, obwohl nichts schiefgelaufen war, zum Beispiel wenn Windows heruntergefahren oder du abgemeldet wurdest, während Kontoblick offen war. Das zählt jetzt als normales Beenden. Taucht die Meldung trotzdem noch auf, gib das bitte unter „Feedback“ als Fehler an."
+                  "Neu: Dev-Kanal für ausgewählte Tester. Wer dafür freigeschaltet ist, kann unter „Updates“ zwischen Stable und Dev wechseln, Test-Versionen laden und melden, ob ein Fehler behoben ist. Für alle anderen ändert sich nichts."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.13",
+                        "notes":  [
+                                      "Neu: Dev-Kanal für ausgewählte Tester. Wer dafür freigeschaltet ist, kann unter „Updates“ zwischen Stable und Dev wechseln, Test-Versionen laden und melden, ob ein Fehler behoben ist. Für alle anderen ändert sich nichts."
+                                  ]
+                    },
                     {
                         "version":  "5.1.12",
                         "notes":  [

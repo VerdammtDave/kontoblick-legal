@@ -1,14 +1,39 @@
 {
-    "version":  "5.1.16",
-    "file":  "Kontoblick-Beta-Setup-5.1.16.exe",
-    "sha256":  "f8b30586be4f7a00085ae12bf64011d657c8dbbd608cbe93de79fd3ffe5e7305",
-    "size":  18550272,
+    "version":  "5.2.0",
+    "file":  "Kontoblick-Beta-Setup-5.2.0.exe",
+    "sha256":  "49a6dbb9af49dc49482819614cf41801305992b64ca641a40ca925a6a3b09f73",
+    "size":  18522624,
     "virustotal":  false,
     "notes":  [
-                  "Neu: Wer Zugang zum Dev-Kanal hat, bekommt bei „Nach Updates suchen“ auch auf Stable eine neuere Test-Version angeboten. „Test-Version laden“ wechselt auf den Dev-Kanal und lädt sie, „Später“ bleibt auf Stable.",
-                  "Neu: Wartet eine Test-Version, zeigt ein kleiner orangefarbener Punkt bei „Updates“ in der Seitenleiste das an. Unter „Updates“ steht dann ein Hinweis mit „Test-Version ansehen“."
+                  "Neu: Neues App-Symbol. Kontoblick bekommt ein neues Logo mit Bank, Geldbörse und Euro-Münze, in der App, im Installer, in der Taskleiste und auf der Webseite.",
+                  "Behoben: Termine und Zeiträume verrutschen bei der Zeitumstellung nicht mehr (Stichtag, wöchentliche Zahlungen, Gehaltsmonat, Ablauf der Freigabe).",
+                  "Behoben: Eine Schuld mit kurzem Namen (zum Beispiel „ING“) passt nicht mehr auf Buchungen wie „Shopping“. Der Name muss als ganzes Wort vorkommen.",
+                  "Behoben: Wird eine Schuldzahlung zurückgenommen, die größer war als der Restbetrag, stimmt der Restbetrag danach wieder.",
+                  "Behoben: Bei Schulden sind keine negativen Beträge mehr möglich.",
+                  "Behoben: „Lohnsteuer“ zählt nicht mehr als Gehalt, und „Spa“ wird als Körperpflege erkannt.",
+                  "Behoben: Gibt man im Budget-Feld keine Zahl ein, bleibt das bisherige Budget erhalten, statt gelöscht zu werden.",
+                  "Neu: Die Sicherung enthält jetzt auch Belege und Profilbild. Ältere Sicherungen lassen sich weiter einspielen.",
+                  "Neu: „Trennen“ beendet die Freigabe auch bei Enable Banking. Klappt das nicht (zum Beispiel ohne Internet), weist Kontoblick darauf hin.",
+                  "Behoben: Bricht man bei der Bank die Freigabe ab, zeigt der Browser nicht mehr „Bank verbunden“. Fremde Aufrufe der Rückleitung brechen die Anmeldung nicht mehr ab.",
+                  "Behoben: Ist die Datendatei beim Start kurz gesperrt (zum Beispiel durch den Virenscanner), versucht Kontoblick es erneut, statt auf einen älteren Stand auszuweichen."
               ],
     "history":  [
+                    {
+                        "version":  "5.2.0",
+                        "notes":  [
+                                      "Neu: Neues App-Symbol. Kontoblick bekommt ein neues Logo mit Bank, Geldbörse und Euro-Münze, in der App, im Installer, in der Taskleiste und auf der Webseite.",
+                                      "Behoben: Termine und Zeiträume verrutschen bei der Zeitumstellung nicht mehr (Stichtag, wöchentliche Zahlungen, Gehaltsmonat, Ablauf der Freigabe).",
+                                      "Behoben: Eine Schuld mit kurzem Namen (zum Beispiel „ING“) passt nicht mehr auf Buchungen wie „Shopping“. Der Name muss als ganzes Wort vorkommen.",
+                                      "Behoben: Wird eine Schuldzahlung zurückgenommen, die größer war als der Restbetrag, stimmt der Restbetrag danach wieder.",
+                                      "Behoben: Bei Schulden sind keine negativen Beträge mehr möglich.",
+                                      "Behoben: „Lohnsteuer“ zählt nicht mehr als Gehalt, und „Spa“ wird als Körperpflege erkannt.",
+                                      "Behoben: Gibt man im Budget-Feld keine Zahl ein, bleibt das bisherige Budget erhalten, statt gelöscht zu werden.",
+                                      "Neu: Die Sicherung enthält jetzt auch Belege und Profilbild. Ältere Sicherungen lassen sich weiter einspielen.",
+                                      "Neu: „Trennen“ beendet die Freigabe auch bei Enable Banking. Klappt das nicht (zum Beispiel ohne Internet), weist Kontoblick darauf hin.",
+                                      "Behoben: Bricht man bei der Bank die Freigabe ab, zeigt der Browser nicht mehr „Bank verbunden“. Fremde Aufrufe der Rückleitung brechen die Anmeldung nicht mehr ab.",
+                                      "Behoben: Ist die Datendatei beim Start kurz gesperrt (zum Beispiel durch den Virenscanner), versucht Kontoblick es erneut, statt auf einen älteren Stand auszuweichen."
+                                  ]
+                    },
                     {
                         "version":  "5.1.16",
                         "notes":  [

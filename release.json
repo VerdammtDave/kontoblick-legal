@@ -1,34 +1,21 @@
 {
-    "version":  "5.1.15",
-    "file":  "Kontoblick-Beta-Setup-5.1.15.exe",
-    "sha256":  "0915ce2a35e88b69d18f62e47fd204ccc5816c451834f7151f2b57919875b05e",
-    "size":  18547712,
+    "version":  "5.1.16",
+    "file":  "Kontoblick-Beta-Setup-5.1.16.exe",
+    "sha256":  "f8b30586be4f7a00085ae12bf64011d657c8dbbd608cbe93de79fd3ffe5e7305",
+    "size":  18550272,
     "virustotal":  false,
     "notes":  [
-                  "Behoben: Bei Buchungen von „Telekom Deutschland GmbH congstar“ erschien das Telekom-Logo statt congstar.",
-                  "Neu: Buchungen lassen sich umbenennen. Im Fenster „Buchung bearbeiten“ gibt es den Bereich „Name“. Mit dem Schalter „Alle Buchungen mit diesem Namen umbenennen“ gilt der neue Name für alle gleichnamigen Buchungen. Unter dem neuen Namen steht klein der Originalname, und „Zurücksetzen“ stellt ihn wieder her. Abos, Schulden und Regeln erkennen Buchungen weiter am Originalnamen.",
-                  "Neu: Logos für Deutsche Post, rufmobil.nrw, Starlight Express, gamescom, DoktorABC, Factory Dorsten/Bottrop und Joyn. EDEKA wird auch bei „E-Center“ erkannt, Too Good To Go auch bei „Too Good Too Go“ und „TGTG“. Das Movie-Park-Logo ist größer.",
-                  "Neu: An eine Buchung lassen sich mehrere Belege anhängen (bis zu 10, JPG, PNG, WebP oder PDF). Bisherige Belege bleiben erhalten.",
-                  "Neu: Hat ein Konto einen eigenen Namen, steht darunter klein der Originalname der Bank.",
-                  "Neu: Logos für beyerdynamic, Deutsche Glasfaser, Die Grünen, Kreis Coesfeld und Apotheken. Burger King wird auch bei „Burger-King“ erkannt.",
-                  "Neu: „Kreis Coesfeld“ zählt als Gebühren \u0026 Steuern.",
-                  "Neu: Neue Symbole in der Seitenleiste: Bank mit vier Säulen bei Konten, Listensymbol bei Finanzplan, Karte bei Schulden und eine einzelne Sprechblase bei Feedback.",
-                  "Behoben: Wurde der PC heruntergefahren, während Kontoblick lief, meldete der nächste Start fälschlich „unerwartet beendet“. Das Herunterfahren wird jetzt früher erkannt und gilt nicht mehr als Absturz.",
-                  "Neu: Absturzfenster. Wurde Kontoblick unerwartet beendet, öffnet sich beim nächsten Start ein Fenster mit dem Crashlog (ohne Kontodaten). Du kannst ihn als „Crashlog.txt“ speichern oder mit einem Klick im Feedback anhängen.",
-                  "Neu: Feedback überarbeitet. Bis zu 6 Anhänge pro Nachricht (Bilder, Textdateien, Crashlog.txt), auch per Drag \u0026 Drop. Eigene Nachrichten lassen sich löschen. Im Eingang (Entwickler) liegen Neues, In Arbeit, „Später“ und Erledigtes in getrennten Fächern, „Kommt später“ blockiert den Eingang nicht mehr. Einladungen und Live-Status stehen gemeinsam unter „Verwaltung“. Die Datenbank-Neuerungen stehen in supabase/feedback-v2.sql.",
-                  "Neu: „Aktualisieren“ sitzt jetzt rechts auf der Höhe der Monatswahl statt unten links in der Seitenleiste.",
-                  "Neu: „Letzte Buchungen“ zeigt zehn Einträge pro Seite mit einem schmalen Seitenwechsel darunter.",
-                  "Neu: Firmenlogos. Bekannte Marken (zum Beispiel Amazon, Lidl, REWE, Netflix, Spotify, PayPal, Deutsche Bahn, Kinoheld, Aral, DHL; rund 125) zeigen in Buchungen, im Buchungsfenster und bei den Abos ihr Logo statt eines Buchstabens. Die Logos sind in der App enthalten: Es wird nichts aus dem Internet geladen und kein Händlername an einen Dienst gesendet. Unbekannte Händler behalten den Buchstaben, es wird nie geraten.",
-                  "Neu: Das Fenster „Buchung bearbeiten“ ist neu gestaltet: Kopf mit Händler-Badge und Farbhauch der Kategorie, Kategorien mit Farbpunkt, Notiz, Umbuchung und Beleg als übersichtliche Karten.",
-                  "Neu: Frischere Optik. Klarere, größere Symbole in der Seitenleiste, farbige Karten bei Einnahmen, Ausgaben und Gespart und ein weicher Farbverlauf im Hintergrund.",
-                  "Behoben: Bei Sparkassen stand bei den Konten „Freigabe nicht mehr gültig“, obwohl die Freigabe noch lief. In Wahrheit hatte die Bank nur das Tageslimit für automatische Abrufe gemeldet (PSD2). Jetzt sagt Kontoblick das auch so und zeigt den zuletzt gespeicherten Stand.",
-                  "Neu: Kontoblick schont das Abruf-Limit der Banken. Meldet die Bank das Tageslimit, fragt die App für dieses Konto heute nicht weiter an (auch nicht nach einem Neustart). Ältere Monate, die schon im Archiv liegen, und vorgemerkte Umsätze älterer Monate werden nicht mehr bei jedem Start neu geholt. Das sind deutlich weniger Anfragen pro Start.",
-                  "Behoben: N26 und andere Banken lehnen vorgemerkte Umsätze bis zum Monatsende mit „Range cannot be in the future“ ab. Kontoblick liest jetzt auch den genauen Grund der Bank und wiederholt den Abruf mit „gestern“ als Enddatum. Vorher blieb dort ein Fehler stehen.",
-                  "Behoben: „Error interacting with ASPSP“ heißt jetzt verständlich, dass die Bank selbst einen internen Fehler meldet. Scheitern nur ältere Monate bei der Bank, erscheint beim Konto kein Fehler mehr, solange der aktuelle Monat lädt.",
-                  "Behoben: Lehnt die Bank nur die vorgemerkten Umsätze ab, lädt Kontoblick die gebuchten Umsätze trotzdem.",
-                  "Behoben: „Freigabe nicht mehr gültig, verbinde neu“ erscheint nur noch, wenn die Freigabe laut Ablaufdatum wirklich abgelaufen ist. Sonst steht dort, dass die Bank diesen Abruf ablehnt. Ein Fehler verschwindet außerdem, sobald ein Abruf wieder klappt."
+                  "Neu: Wer Zugang zum Dev-Kanal hat, bekommt bei „Nach Updates suchen“ auch auf Stable eine neuere Test-Version angeboten. „Test-Version laden“ wechselt auf den Dev-Kanal und lädt sie, „Später“ bleibt auf Stable.",
+                  "Neu: Wartet eine Test-Version, zeigt ein kleiner orangefarbener Punkt bei „Updates“ in der Seitenleiste das an. Unter „Updates“ steht dann ein Hinweis mit „Test-Version ansehen“."
               ],
     "history":  [
+                    {
+                        "version":  "5.1.16",
+                        "notes":  [
+                                      "Neu: Wer Zugang zum Dev-Kanal hat, bekommt bei „Nach Updates suchen“ auch auf Stable eine neuere Test-Version angeboten. „Test-Version laden“ wechselt auf den Dev-Kanal und lädt sie, „Später“ bleibt auf Stable.",
+                                      "Neu: Wartet eine Test-Version, zeigt ein kleiner orangefarbener Punkt bei „Updates“ in der Seitenleiste das an. Unter „Updates“ steht dann ein Hinweis mit „Test-Version ansehen“."
+                                  ]
+                    },
                     {
                         "version":  "5.1.15",
                         "notes":  [

@@ -1,23 +1,27 @@
 {
-    "version":  "5.2.0",
-    "file":  "Kontoblick-Beta-Setup-5.2.0.exe",
-    "sha256":  "49a6dbb9af49dc49482819614cf41801305992b64ca641a40ca925a6a3b09f73",
-    "size":  18522624,
+    "version":  "5.2.1",
+    "file":  "Kontoblick-Beta-Setup-5.2.1.exe",
+    "sha256":  "2675f341f098ad618a9ed50e1a7c732341c1195c39cb6bf4389b6b2381d499cc",
+    "size":  18527232,
     "virustotal":  false,
     "notes":  [
-                  "Neu: Neues App-Symbol. Kontoblick bekommt ein neues Logo mit Bank, Geldbörse und Euro-Münze, in der App, im Installer, in der Taskleiste und auf der Webseite.",
-                  "Behoben: Termine und Zeiträume verrutschen bei der Zeitumstellung nicht mehr (Stichtag, wöchentliche Zahlungen, Gehaltsmonat, Ablauf der Freigabe).",
-                  "Behoben: Eine Schuld mit kurzem Namen (zum Beispiel „ING“) passt nicht mehr auf Buchungen wie „Shopping“. Der Name muss als ganzes Wort vorkommen.",
-                  "Behoben: Wird eine Schuldzahlung zurückgenommen, die größer war als der Restbetrag, stimmt der Restbetrag danach wieder.",
-                  "Behoben: Bei Schulden sind keine negativen Beträge mehr möglich.",
-                  "Behoben: „Lohnsteuer“ zählt nicht mehr als Gehalt, und „Spa“ wird als Körperpflege erkannt.",
-                  "Behoben: Gibt man im Budget-Feld keine Zahl ein, bleibt das bisherige Budget erhalten, statt gelöscht zu werden.",
-                  "Neu: Die Sicherung enthält jetzt auch Belege und Profilbild. Ältere Sicherungen lassen sich weiter einspielen.",
-                  "Neu: „Trennen“ beendet die Freigabe auch bei Enable Banking. Klappt das nicht (zum Beispiel ohne Internet), weist Kontoblick darauf hin.",
-                  "Behoben: Bricht man bei der Bank die Freigabe ab, zeigt der Browser nicht mehr „Bank verbunden“. Fremde Aufrufe der Rückleitung brechen die Anmeldung nicht mehr ab.",
-                  "Behoben: Ist die Datendatei beim Start kurz gesperrt (zum Beispiel durch den Virenscanner), versucht Kontoblick es erneut, statt auf einen älteren Stand auszuweichen."
+                  "Neu: Während der Beta meldet Kontoblick beim Start seine installierte Version zusammen mit der zufälligen Geräte-Kennung an den Entwickler, damit er sehen kann, wer auf dem neuesten Stand ist. Es werden keine Namen, E-Mail-Adressen oder Kontodaten gesendet. Zum öffentlichen Release entfällt das wieder.",
+                  "Behoben: Ein Betrag mit Punkt und führender Null, zum Beispiel „0.500“, wurde als 500 gelesen. Jetzt sind es 50 Cent. Tausenderpunkte („1.234“) funktionieren wie bisher.",
+                  "Behoben: Eine als Einnahme markierte Buchung mit leerem Namen machte alle Geldeingänge zur regelmäßigen Einnahme und verfälschte Cashflow und Finanzplan. Jetzt passt ein leerer Suchtext auf nichts.",
+                  "Behoben: Beim Einspielen einer Sicherung können Belege nur noch im Kontoblick-Ordner landen, auch wenn die Sicherung aus unbekannter Quelle stammt.",
+                  "Behoben: Der Dateiname eines Updates wird vor dem Speichern von Pfadanteilen befreit."
               ],
     "history":  [
+                    {
+                        "version":  "5.2.1",
+                        "notes":  [
+                                      "Neu: Während der Beta meldet Kontoblick beim Start seine installierte Version zusammen mit der zufälligen Geräte-Kennung an den Entwickler, damit er sehen kann, wer auf dem neuesten Stand ist. Es werden keine Namen, E-Mail-Adressen oder Kontodaten gesendet. Zum öffentlichen Release entfällt das wieder.",
+                                      "Behoben: Ein Betrag mit Punkt und führender Null, zum Beispiel „0.500“, wurde als 500 gelesen. Jetzt sind es 50 Cent. Tausenderpunkte („1.234“) funktionieren wie bisher.",
+                                      "Behoben: Eine als Einnahme markierte Buchung mit leerem Namen machte alle Geldeingänge zur regelmäßigen Einnahme und verfälschte Cashflow und Finanzplan. Jetzt passt ein leerer Suchtext auf nichts.",
+                                      "Behoben: Beim Einspielen einer Sicherung können Belege nur noch im Kontoblick-Ordner landen, auch wenn die Sicherung aus unbekannter Quelle stammt.",
+                                      "Behoben: Der Dateiname eines Updates wird vor dem Speichern von Pfadanteilen befreit."
+                                  ]
+                    },
                     {
                         "version":  "5.2.0",
                         "notes":  [
